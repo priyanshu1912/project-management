@@ -30,7 +30,7 @@ function TicketModal({
               />
               <br />
               <br />
-              <input
+              <textarea
                 type="text"
                 name="description"
                 placeholder="Description"
@@ -41,10 +41,7 @@ function TicketModal({
               />
               <br />
               <br />
-              <input
-                type="file"
-                className="outline-none p-1 w-full"
-              />
+              <input type="file" className="outline-none p-1 w-full" />
             </div>
             <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
               <button

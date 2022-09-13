@@ -101,7 +101,12 @@ function App() {
                       <div className="font-semibold uppercase">
                         {item.title}
                       </div>
-                      <div className="mt-1.5">{item.description}</div>
+                      <textarea
+                        rows={4}
+                        className="mt-1.5 resize-none new-class"
+                      >
+                        {item.description}
+                      </textarea>
                     </div>
                   );
                 })}
