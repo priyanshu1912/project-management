@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import Modal from "./components/Modal";
 import TicketModal from "./components/TicketModal";
+import { dashboardData, completedTasks } from "../src/Mock-data.js";
 
 let initial = {
   title: "",
@@ -25,6 +26,8 @@ function App() {
     setTicketData(initial);
     setTicketModal(false);
   };
+
+  console.log(dashboardData);
 
   return (
     <div className="text-sm bg-white w-full min-h-screen flex sm:flex-col gap-3 py-3 px-3">
@@ -84,45 +87,56 @@ function App() {
             </div>
           </div>
         </div> */}
-        {cols.length > 0 &&
-          cols.map((item, index) => {
-            let activity = Object.keys(item);
-            return (
-              <div
-                key={index}
-                className="bg-gray-100 shadow-sm rounded-md py-2 px-2 w-1/3 sm:w-full shrink-0"
-              >
-                <div className="mb-3 font-semibold px-1 uppercase">
-                  {activity}
-                </div>
-                {cols[index][activity].map((item) => {
-                  return (
-                    <div className="shadow-md p-2 rounded-md bg-white h-fit mb-1.5">
-                      <div className="font-semibold uppercase">
-                        {item.title}
-                      </div>
+        {dashboardData?.map((item, index) => {
+          //let activity = Object.keys(item);
+          console.log(item);
+          return (
+            <div
+              key={index}
+              className="bg-gray-100 shadow-sm rounded-md py-2 px-2 w-1/3 sm:w-full shrink-0"
+            >
+              <div className="mb-3 font-semibold px-1 uppercase">
+                {item.project}
+              </div>
+              {item.tasks.map((item) => {
+                console.log(item);
+                return (
+                  <div className="shadow-md p-2 rounded-md bg-white h-fit mb-1.5">
+                    <div className="font-semibold uppercase">{item.title}</div>
+                    {item.description.length > 1 ? (
+                      <ul>
+                        {item.description.map((x, index) => {
+                          return (
+                            <div>
+                              {index + 1}. {x}
+                            </div>
+                          );
+                        })}
+                      </ul>
+                    ) : (
                       <textarea
                         rows={4}
                         className="mt-1.5 resize-none new-class"
                       >
                         {item.description}
                       </textarea>
-                    </div>
-                  );
-                })}
-                <div
-                  onClick={() => {
-                    setCurrentIndex(index);
-                    setCurrentActivity(activity);
-                    setTicketModal(!ticketModal);
-                  }}
-                  className="bg-white shadow-md rounded-md py-4 px-2 w-full shrink-0 h-fit cursor-pointer "
-                >
-                  <div className="font-semibold px-1 text-center">ADD NEW</div>
-                </div>
-              </div>
-            );
-          })}
+                    )}
+                  </div>
+                );
+              })}
+              {/* <div
+                onClick={() => {
+                  setCurrentIndex(index);
+                  setCurrentActivity(activity);
+                  setTicketModal(!ticketModal);
+                }}
+                className="bg-white shadow-md rounded-md py-4 px-2 w-full shrink-0 h-fit cursor-pointer "
+              >
+                <div className="font-semibold px-1 text-center">ADD NEW</div>
+              </div> */}
+            </div>
+          );
+        })}
         <div
           onClick={() => setOpenModal(!openModal)}
           className="bg-gray-100 shadow-sm rounded-md py-4 px-2 w-1/3 shrink-0 h-fit cursor-pointer "
@@ -131,16 +145,21 @@ function App() {
         </div>
       </div>
       <div className="w-1/4 sm:w-full bg-gray-100 rounded-md py-4 px-1.5">
-        <div className="mb-5">
-          <div className="mb-3 font-semibold px-1 uppercase">
-            Completed Today
-          </div>
-          <ul className="list-disc ml-7">
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-          </ul>
-        </div>
-        <div className="mb-5">
+        {completedTasks?.map((item, index) => {
+          return (
+            <div className="mb-5">
+              <div className="mb-3 font-semibold px-1 uppercase">
+                {item.title}
+              </div>
+              <ul className="list-disc ml-7">
+                {item.tasks.map((task) => {
+                  return <li>{task}</li>;
+                })}
+              </ul>
+            </div>
+          );
+        })}
+        {/* <div className="mb-5">
           <div className="mb-3 font-semibold px-1 uppercase">
             Completed This Week
           </div>
@@ -148,7 +167,7 @@ function App() {
             <li>Lorem, ipsum dolor.</li>
             <li>Lorem, ipsum dolor.</li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );
