@@ -73,3 +73,50 @@ export const completedTasks = [
     ],
   },
 ];
+
+
+
+export const users = [
+  {
+    name: "testuser",
+    email: "testuser@gmail.com",
+    password: "testuser",
+    projects: [
+      {
+        project_name: "redwing",
+        task_lists: [
+          {
+            task_list_name: "time tracking using ETA",
+            tasks: [
+              {
+                title:
+                  "Adding new command to flag a task for counting the defects of the developer and the team lead",
+                description: "",
+                comments: [{}],
+                status: "uncompleted",
+              },
+              {
+                title: "Fixing the carry forward budget",
+                description: "",
+                comments: [{}],
+                status: "uncompleted",
+              },
+              {
+                title: "Check daily slowdown of a user",
+                description: "",
+                comments: [{}],
+                status: "uncompleted",
+              },
+              {
+                title: "Past performance report changes",
+                description: "",
+                comments: [{}],
+                status: "completed",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];
