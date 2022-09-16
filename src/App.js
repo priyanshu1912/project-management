@@ -2,8 +2,8 @@ import "./App.css";
 import { useState } from "react";
 import Modal from "./components/Modal";
 import TicketModal from "./components/TicketModal";
-import { dashboardData, completedTasks,users } from "../src/Mock-data.js";
-import LoginForm from '../src/components/LoginForm/LoginForm.js'
+import { dashboardData, completedTasks, users } from "../src/Mock-data.js";
+import LoginForm from "../src/components/LoginForm/LoginForm.js";
 import {
   BrowserRouter as Router,
   Route,
@@ -11,6 +11,8 @@ import {
   Navigate,
 } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
+import Homepage from "./components/Homepage/Homepage";
+import TaskPage from "./components/Taskpage/TaskPage";
 
 let initial = {
   title: "",
@@ -35,40 +37,27 @@ function App() {
   };
 
   return (
-<>
-    <Router>
-      <Routes>
-        {/* <Route
+    <>
+      <Router>
+        <Routes>
+          {/* <Route
           path="/"
           element={<Navigate to={`/auth/loginStudent`} replace />}
         /> */}
-         <Route
-          path="/"
-          element={<Dashboard />}
-        /> 
-        <Route
-          path="/auth/loginAdmin"
-          element={
-            <LoginForm 
-            title="a Admin"
-            child1="Admin"
-            child2="User"
+          <Route path="/" element={<Dashboard />} />
+          <Route
+            path="/auth/loginAdmin"
+            element={<LoginForm title="a Admin" child1="Admin" child2="User" />}
           />
-        }
-      />
-      <Route
-        path="/auth/loginUser"
-        element={
-          <LoginForm
-            title="a User"
-              child1="User"
-              child2="Admin"
-            />
-          }
-        />
-        
-      </Routes>
-    </Router>
+          <Route
+            path="/auth/loginUser"
+            element={<LoginForm title="a User" child1="User" child2="Admin" />}
+          />
+
+          <Route path="/homepage" element={<Homepage />} />
+          <Route path="/task" element={<TaskPage />} />
+        </Routes>
+      </Router>
     </>
   );
 }

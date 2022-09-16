@@ -82,6 +82,8 @@ export const users = [
     projects: [
       {
         project_name: "redwing",
+        latest_completion_count: 5,
+        latest_comments_count: 3,
         task_lists: [
           {
             task_list_name: "time tracking using ETA",
@@ -165,6 +167,8 @@ export const users = [
     projects: [
       {
         project_name: "Tower App",
+        latest_completion_count: 3,
+        latest_comments_count: 9,
         task_lists: [
           {
             task_list_name: "Nodles - Micro UI",
@@ -207,7 +211,9 @@ export const users = [
     password: "priyanshu",
     projects: [
       {
-        project_name: "redwing",
+        project_name: "Redwing",
+        latest_completion_count: 5,
+        latest_comments_count: 3,
         task_lists: [
           {
             task_list_name: "time tracking using ETA",
@@ -215,25 +221,29 @@ export const users = [
               {
                 title:
                   "Adding new command to flag a task for counting the defects of the developer and the team lead",
-                description: "",
-                comments: [{}],
-                status: "uncompleted",
-              },
-              {
-                title: "Fixing the carry forward budget",
-                description: "",
+                description:
+                  "Puneet when the task is marked as defective, then where to show this count?",
                 comments: [{}],
                 status: "uncompleted",
               },
               {
                 title: "Check daily slowdown of a user",
-                description: "",
+                description:
+                  "we can track the slowdown by finding the difference between the two activities. If the difference is more than 3 hours then it will be calculated as a slowdown.",
                 comments: [{}],
                 status: "uncompleted",
               },
               {
                 title: "Past performance report changes",
-                description: "",
+                description:
+                  "show bar chart only in the weekly tab and remove bar chart from the monthly tab",
+                comments: [{}],
+                status: "completed",
+              },
+              {
+                title:
+                  "Remove the full screen loader and show it in right top corner of the screen, so that when the api is loading, still we can perform action of checking performance etc",
+                description: "!add_budget 0.5",
                 comments: [{}],
                 status: "completed",
               },
@@ -244,28 +254,10 @@ export const users = [
             tasks: [
               {
                 title:
-                  "Adding new command to flag a task for counting the defects of the developer and the team lead",
-                description: "",
+                  "Setup project locally, send me Github username, will invite to the repository.dding new command to flag a task for counting the defects of the developer and the team lead",
+                description: "invitation sent",
                 comments: [{}],
                 status: "uncompleted",
-              },
-              {
-                title: "Fixing the carry forward budget",
-                description: "",
-                comments: [{}],
-                status: "uncompleted",
-              },
-              {
-                title: "Check daily slowdown of a user",
-                description: "",
-                comments: [{}],
-                status: "uncompleted",
-              },
-              {
-                title: "Past performance report changes",
-                description: "",
-                comments: [{}],
-                status: "completed",
               },
             ],
           },
@@ -273,29 +265,24 @@ export const users = [
             task_list_name: "rapid estimation",
             tasks: [
               {
-                title:
-                  "Adding new command to flag a task for counting the defects of the developer and the team lead",
-                description: "",
+                title: "API to login in",
+                description:
+                  "add a new table on the current database for the user list. This is not same as the current user list.",
                 comments: [{}],
                 status: "uncompleted",
               },
               {
-                title: "Fixing the carry forward budget",
-                description: "",
+                title: "API Integartion to login in",
+                description: "What is the API for login integration?",
                 comments: [{}],
                 status: "uncompleted",
               },
               {
-                title: "Check daily slowdown of a user",
-                description: "",
+                title: "API to create and update projects",
+                description:
+                  "These are not the projects currently in the project list check this UI, currently, it's using local storage and a flat-file. We need to convert it to the cloud. This is the flat file.",
                 comments: [{}],
                 status: "uncompleted",
-              },
-              {
-                title: "Past performance report changes",
-                description: "",
-                comments: [{}],
-                status: "completed",
               },
             ],
           },
@@ -303,6 +290,8 @@ export const users = [
       },
       {
         project_name: "GroTrack",
+        latest_completion_count: 11,
+        latest_comments_count: 14,
         task_lists: [
           {
             task_list_name: "hydrafacial survey and consent",
@@ -347,6 +336,8 @@ export const users = [
       },
       {
         project_name: "Intern Portal",
+        latest_completion_count: 3,
+        latest_comments_count: 1,
         task_lists: [
           {
             task_list_name: "feedback cycle",
