@@ -7,8 +7,10 @@ function TaskPage() {
   const [newcomment, setNewcomment] = useState("");
   const [comments, setComments] = useState([]);
 
-  const task = state.task;
-  const userName = state.user;
+  const task = state.task.task;
+  const task_list_name = state.task.item.task_list_name;
+  const project_name = state.project_name;
+  const userName = state.userName;
   console.log(state);
 
   const addComment = (e) => {
@@ -23,7 +25,18 @@ function TaskPage() {
 
   return (
     <div className="py-3 px-3 text-sm">
+      <div className="font-bold text-base">
+        {project_name} - {task_list_name}
+      </div>
       <div className="bg-gray-100 shadow-sm rounded-md w-full min-h-screen py-2 px-2 mt-2">
+        <div
+          className={`w-fit mb-2 py-0.5 px-2 rounded-md ${
+            task?.status === "uncompleted" ? "bg-rose-400" : "bg-green-400"
+          }`}
+        >
+          {task?.status}
+        </div>
+
         <div className="font-semibold mb-2">{task?.title}</div>
         <div>{task?.description}</div>
 

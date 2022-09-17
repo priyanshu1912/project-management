@@ -29,20 +29,22 @@ function Dashboard() {
   };
 
   //console.log(dashboardData);
-  const project = state.project;
-  const userName = state.user.name;
+  const project = state?.project;
+  const userName = state?.user.name;
 
-  console.log(project);
+  //console.log(project);
 
   const openTask = (task) => {
-    navigate("/task", { state: { task, user: userName } });
+    navigate("/task", {
+      state: { task, userName, project_name: project.project_name },
+    });
   };
 
   return (
     <>
       <div className="py-3 px-3">
         <div className="font-bold">
-          {userName} - {project.project_name}
+          {userName} - {project?.project_name}
         </div>
         <div className="text-sm bg-white w-full min-h-screen flex sm:flex-col gap-3 mt-2">
           {openModal && (
@@ -65,7 +67,7 @@ function Dashboard() {
             />
           )}
           <div className="w-9/12 sm:w-full flex gap-2 rounded-md overflow-auto scroll-smooth hide-scrollbar">
-            {project.task_lists.map((item, index) => {
+            {project?.task_lists.map((item, index) => {
               return (
                 <div
                   key={index}
@@ -74,17 +76,17 @@ function Dashboard() {
                   <div className="mb-3 font-semibold px-1 uppercase">
                     {item.task_list_name}
                   </div>
-                  {item.tasks.map((item) => {
-                    if (item.status === "uncompleted") {
+                  {item.tasks.map((task) => {
+                    if (task.status === "uncompleted") {
                       return (
                         <div className="shadow-md p-2 rounded-md bg-white h-fit mb-1.5">
                           <div
                             className="font-semibold cursor-pointer"
-                            onClick={() => openTask(item)}
+                            onClick={() => openTask({ task, item })}
                           >
-                            {item.title}
+                            {task.title}
                           </div>
-                          <div className="mt-1.5">{item.description}</div>
+                          <div className="mt-1.5">{task.description}</div>
                           {/* {item.tasks.length > 1 ? (
                         <ul>
                           {item.description.map((x, index) => {
@@ -133,7 +135,7 @@ function Dashboard() {
                 COMPLETED TODAY
               </div>
               <div>
-                {project.task_lists.map((item, index) => {
+                {project?.task_lists.map((item, index) => {
                   return (
                     <>
                       {item.tasks.map((item) => {
@@ -171,7 +173,7 @@ function Dashboard() {
                 COMPLETED THIS WEEK
               </div>
               <div>
-                {project.task_lists.map((item, index) => {
+                {project?.task_lists.map((item, index) => {
                   return (
                     <>
                       {item.tasks.map((item) => {
