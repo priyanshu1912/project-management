@@ -81,78 +81,57 @@ export const users = [
     password: "anand",
     projects: [
       {
-        project_name: "redwing",
+        project_name: "Client coordination",
         latest_completion_count: 5,
         latest_comments_count: 3,
         task_lists: [
           {
-            task_list_name: "time tracking using ETA",
+            task_list_name: "Admin dashboard",
             tasks: [
               {
                 title:
-                  "Adding new command to flag a task for counting the defects of the developer and the team lead",
+                  "When a admin login, show the list of users(home page for admin)",
                 description:
-                  "Puneet when the task is marked as defective, then where to show this count?",
+                  "show the count of total latest comments on all the projects of that user",
                 comments: [{}],
                 status: "uncompleted",
               },
               {
-                title: "Check daily slowdown of a user",
-                description:
-                  "we can track the slowdown by finding the difference between the two activities. If the difference is more than 3 hours then it will be calculated as a slowdown.",
-                comments: [{}],
-                status: "uncompleted",
-              },
-              {
-                title: "Past performance report changes",
-                description:
-                  "show bar chart only in the weekly tab and remove bar chart from the monthly tab",
-                comments: [{}],
-                status: "completed",
-              },
-              {
                 title:
-                  "Remove the full screen loader and show it in right top corner of the screen, so that when the api is loading, still we can perform action of checking performance etc",
-                description: "!add_budget 0.5",
-                comments: [{}],
-                status: "completed",
-              },
-            ],
-          },
-          {
-            task_list_name: "setup",
-            tasks: [
-              {
-                title:
-                  "Setup project locally, send me Github username, will invite to the repository.dding new command to flag a task for counting the defects of the developer and the team lead",
-                description: "invitation sent",
+                  "On clicking the user card, show all the projects of that user",
+                description:
+                  "show the count of total latest completion marked on that project",
                 comments: [{}],
                 status: "uncompleted",
               },
             ],
           },
           {
-            task_list_name: "rapid estimation",
+            task_list_name: "Client dashboard",
             tasks: [
               {
-                title: "API to login in",
-                description:
-                  "add a new table on the current database for the user list. This is not same as the current user list.",
+                title:
+                  "Add a green tick instead of dots on the list of completed today and completed this week",
+                description: "use if there is no other icon package",
+                comments: [{}],
+                status: "uncompleted",
+              },
+            ],
+          },
+          {
+            task_list_name: "Responsive",
+            tasks: [
+              {
+                title: "Make the dashboard page mobile responsive",
+                description: "did you check the project name of this task?",
                 comments: [{}],
                 status: "uncompleted",
               },
               {
-                title: "API Integartion to login in",
-                description: "What is the API for login integration?",
+                title: "Make the modal mobile responsive",
+                description: "Click on the add new to open the modals.",
                 comments: [{}],
-                status: "uncompleted",
-              },
-              {
-                title: "API to create and update projects",
-                description:
-                  "These are not the projects currently in the project list check this UI, currently, it's using local storage and a flat-file. We need to convert it to the cloud. This is the flat file.",
-                comments: [{}],
-                status: "uncompleted",
+                status: "completed",
               },
             ],
           },
