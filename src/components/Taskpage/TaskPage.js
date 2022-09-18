@@ -30,15 +30,31 @@ function TaskPage() {
       </div>
       <div className="bg-gray-100 shadow-sm rounded-md w-full min-h-screen py-2 px-2 mt-2">
         <div
-          className={`w-fit mb-2 py-0.5 px-2 rounded-md ${
+          className={`w-fit mb-2 py-0.5 px-2 text-white rounded-md ${
             task?.status === "uncompleted" ? "bg-rose-400" : "bg-green-400"
           }`}
         >
           {task?.status}
         </div>
 
-        <div className="font-semibold mb-2">{task?.title}</div>
-        <div>{task?.description}</div>
+        <div className="font-semibold my-3">{task?.title}</div>
+        
+        <div>Description:</div>
+        {task?.description.length > 1 ? (
+          <ul>
+            {task?.description.map((x, index) => {
+              return (
+                <div>
+                  {index + 1}. {x}
+                </div>
+              );
+            })}
+          </ul>
+        ) : (
+          <div className="resize-none new-class">
+            {task?.description}
+          </div>
+        )}
 
         {/* comments */}
         <div className="mt-20">

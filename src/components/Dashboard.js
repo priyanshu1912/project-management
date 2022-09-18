@@ -138,12 +138,12 @@ function Dashboard() {
                 {project?.task_lists.map((item, index) => {
                   return (
                     <>
-                      {item.tasks.map((item) => {
-                        if (item.status === "completed") {
+                      {item.tasks.map((task) => {
+                        if (task.status === "completed") {
                           return (
                             <div
                               className="flex gap-1 mb-1 cursor-pointer"
-                              onClick={() => openTask(item)}
+                              onClick={() => openTask({ task, item })}
                             >
                               <svg
                                 width="16"
@@ -158,7 +158,7 @@ function Dashboard() {
                                   fill="#14FF00"
                                 />
                               </svg>
-                              {item.title}
+                              {task.title}
                             </div>
                           );
                         }
@@ -176,12 +176,12 @@ function Dashboard() {
                 {project?.task_lists.map((item, index) => {
                   return (
                     <>
-                      {item.tasks.map((item) => {
-                        if (item.status === "completed") {
+                      {item.tasks.map((task) => {
+                        if (task.status === "completed") {
                           return (
                             <div
                               className="flex gap-1 mb-1 cursor-pointer"
-                              onClick={() => openTask(item)}
+                              onClick={() => openTask({ task, item })}
                             >
                               <svg
                                 width="16"
@@ -196,7 +196,7 @@ function Dashboard() {
                                   fill="#14FF00"
                                 />
                               </svg>
-                              {item.title}
+                              {task.title}
                             </div>
                           );
                         }
