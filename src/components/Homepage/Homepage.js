@@ -8,7 +8,7 @@ function Homepage() {
   const user = state;
 
   const openProject = (project) => {
-    navigate("/", { state: { project, user: { name: user.name } } });
+    navigate("/dashboard", { state: { project, user: { name: user.name } } });
   };
 
   return (

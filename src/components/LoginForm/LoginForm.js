@@ -57,6 +57,7 @@ export default function AuthenticationPage(props) {
   //   };
 
   const handleSubmit = () => {
+    props.setFlag(true);
     let user = users.filter((item) => item.email === email);
     console.log(user);
     navigate("/homepage", { state: user[0] });
@@ -173,6 +174,7 @@ export default function AuthenticationPage(props) {
                 >
                   Sign In
                 </button>
+                {/* </Link> */}
               </div>
 
               <div className="mt-6">

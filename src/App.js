@@ -23,7 +23,7 @@ function App() {
   const [cols, setCols] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [ticketModal, setTicketModal] = useState(false);
-  const [text, setText] = useState("");
+  const [flag, setFlag] = useState(false);
 
   const [currentIndex, setCurrentIndex] = useState("");
   const [currentActivity, setCurrentActivity] = useState("");
@@ -35,27 +35,46 @@ function App() {
     setTicketData(initial);
     setTicketModal(false);
   };
+  console.log("flag",flag);
 
   return (
     <>
       <Router>
         <Routes>
-          {/* <Route
+          <Route
           path="/"
-          element={<Navigate to={`/auth/loginStudent`} replace />}
-        /> */}
-          <Route path="/" element={<Dashboard />} />
+          element={<Navigate to={`/auth/loginAdmin`} replace />}
+        />
           <Route
             path="/auth/loginAdmin"
-            element={<LoginForm title="a Admin" child1="Admin" child2="User" />}
+            element={<LoginForm setFlag={setFlag} title="a Admin" child1="Admin" child2="User" />}
           />
-          <Route
-            path="/auth/loginUser"
-            element={<LoginForm title="a User" child1="User" child2="Admin" />}
+            <Route
+              path="/auth/loginUser"
+              element={<LoginForm setFlag={setFlag} title="a User" child1="User" child2="Admin" />}
+            />
+            
+            {flag?(
+           <>
+            <Route
+            path="/dashboard"
+            element={<Dashboard  />}
           />
-
           <Route path="/homepage" element={<Homepage />} />
           <Route path="/task" element={<TaskPage />} />
+          </>
+            )
+          :
+          (<>
+            <Route
+            path="/dashboard"
+            element={<Navigate to={`/auth/loginAdmin`} replace />}
+          />
+          <Route path="/homepage" element={<Navigate to={`/auth/loginAdmin`} replace />} />
+          <Route path="/task" element={<Navigate to={`/auth/loginAdmin`} replace />} />
+          </>)
+          // null
+          }
         </Routes>
       </Router>
     </>
