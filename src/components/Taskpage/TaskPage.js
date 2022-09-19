@@ -12,7 +12,6 @@ function TaskPage() {
   const task_list_name = state.task.item.task_list_name;
   const project_name = state.project_name;
   const userName = state.userName;
-  console.log("state", state);
 
   const addComment = (e) => {
     e.preventDefault();

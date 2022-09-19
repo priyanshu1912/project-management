@@ -5,7 +5,6 @@ import Modal from "../../components/Modal";
 function Homepage() {
   const { state } = useLocation();
   const navigate = useNavigate();
-  console.log("state", state);
   const user = state;
 
   const [cols, setCols] = useState([]);
@@ -15,14 +14,14 @@ function Homepage() {
   const openProject = (project) => {
     if (localStorage.getItem("user_role") === "admin") {
       navigate(`/user/${user.id}/project/${project.id}`, {
-        state: { project, user: { name: user.name } },
+        state: { project, user: { name: user.name, id: user.id } },
       });
     } else {
-      navigate("/dashboard", { state: { project, user: { name: user.name } } });
+      navigate("/dashboard", {
+        state: { project, user: { name: user.name, id: user.id } },
+      });
     }
   };
-
-  console.log(cols);
 
   return (
     <>

@@ -32,12 +32,10 @@ function App() {
   const [ticketData, setTicketData] = useState(initial);
 
   const saveTicket = () => {
-    //console.log(ticketData);
     cols[currentIndex][currentActivity].push(ticketData);
     setTicketData(initial);
     setTicketModal(false);
   };
-  console.log("flag", flag);
 
   return (
     <>

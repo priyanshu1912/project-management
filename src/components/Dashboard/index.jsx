@@ -24,20 +24,16 @@ function Dashboard() {
   const [ticketData, setTicketData] = useState(initial);
 
   const saveTicket = () => {
-    //console.log(ticketData);
     cols[currentIndex][currentActivity].push(ticketData);
     setTicketData(initial);
     setTicketModal(false);
   };
 
-  //console.log(dashboardData);
   const project = state?.project;
   const userName = state?.user.name;
-
-  //console.log(project);
+  const userId = state?.user.id;
 
   const openTask = (task) => {
-    const userId = localStorage.getItem("user_id");
     if (localStorage.getItem("user_role") === "admin") {
       navigate(`/user/${userId}/project/${project.id}/task/${task.task.id}`, {
         state: { task, userName, project_name: project.project_name },

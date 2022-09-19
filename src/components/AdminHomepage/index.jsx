@@ -25,8 +25,6 @@ function AdminHomepage() {
     user.totalCompletions = totalCompletions;
   });
 
-  console.log("totalComments", allUsers);
-
   return (
     <div className='py-3 px-3'>
       <div className='grid grid-cols-3 gap-2 w-full text-sm mt-2'>
