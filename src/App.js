@@ -13,6 +13,7 @@ import {
 import Dashboard from "./components/Dashboard";
 import Homepage from "./components/Homepage/Homepage";
 import TaskPage from "./components/Taskpage/TaskPage";
+import AdminHomepage from "./components/AdminHomepage";
 
 let initial = {
   title: "",
@@ -35,45 +36,68 @@ function App() {
     setTicketData(initial);
     setTicketModal(false);
   };
-  console.log("flag",flag);
+  console.log("flag", flag);
 
   return (
     <>
       <Router>
         <Routes>
           <Route
-          path="/"
-          element={<Navigate to={`/auth/loginAdmin`} replace />}
-        />
-          <Route
-            path="/auth/loginAdmin"
-            element={<LoginForm setFlag={setFlag} title="a Admin" child1="Admin" child2="User" />}
-          />
-            <Route
-              path="/auth/loginUser"
-              element={<LoginForm setFlag={setFlag} title="a User" child1="User" child2="Admin" />}
-            />
-            
-            {flag?(
-           <>
-            <Route
-            path="/dashboard"
-            element={<Dashboard  />}
-          />
-          <Route path="/homepage" element={<Homepage />} />
-          <Route path="/task" element={<TaskPage />} />
-          </>
-            )
-          :
-          (<>
-            <Route
-            path="/dashboard"
+            path='/'
             element={<Navigate to={`/auth/loginAdmin`} replace />}
           />
-          <Route path="/homepage" element={<Navigate to={`/auth/loginAdmin`} replace />} />
-          <Route path="/task" element={<Navigate to={`/auth/loginAdmin`} replace />} />
-          </>)
-          // null
+          <Route
+            path='/auth/loginAdmin'
+            element={
+              <LoginForm
+                setFlag={setFlag}
+                title='Admin'
+                child1='Admin'
+                child2='User'
+              />
+            }
+          />
+          <Route
+            path='/auth/loginUser'
+            element={
+              <LoginForm
+                setFlag={setFlag}
+                title='User'
+                child1='User'
+                child2='Admin'
+              />
+            }
+          />
+
+          {
+            flag ? (
+              <>
+                <Route path='/dashboard' element={<Dashboard />} />
+                <Route path='/homepage' element={<Homepage />} />
+                <Route path='/adminhomepage' element={<AdminHomepage />} />
+                <Route path='/task' element={<TaskPage />} />
+              </>
+            ) : (
+              <>
+                <Route
+                  path='/dashboard'
+                  element={<Navigate to={`/auth/loginAdmin`} replace />}
+                />
+                <Route
+                  path='/homepage'
+                  element={<Navigate to={`/auth/loginAdmin`} replace />}
+                />
+                <Route
+                  path='/adminhomepage'
+                  element={<Navigate to={`/auth/loginAdmin`} replace />}
+                />
+                <Route
+                  path='/task'
+                  element={<Navigate to={`/auth/loginAdmin`} replace />}
+                />
+              </>
+            )
+            // null
           }
         </Routes>
       </Router>
