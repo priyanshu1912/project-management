@@ -93,7 +93,10 @@ export const users = [
                   "When a admin login, show the list of users(home page for admin)",
                 description:
                   ["show the count of total latest comments on all the projects of that user"],
-                comments: [{}],
+                comments: [
+                   "this is another tst comment",
+                   "this is another tst comment"
+                ],
                 status: "uncompleted",
               },
               {

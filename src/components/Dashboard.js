@@ -3,6 +3,9 @@ import { useState } from "react";
 import Modal from "../components/Modal";
 import TicketModal from "../components/TicketModal";
 import { useLocation, useNavigate } from "react-router-dom";
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+
 
 let initial = {
   title: "",
@@ -43,8 +46,13 @@ function Dashboard() {
   return (
     <>
       <div className="py-3 px-3">
+        <div className="flex justify-between">
         <div className="font-bold">
           {userName} - {project?.project_name}
+        </div>
+        <div className="icon">
+          <NotificationsIcon />
+        </div>
         </div>
         <div className="text-sm bg-white w-full min-h-screen flex sm:flex-col gap-3 mt-2">
           {openModal && (
@@ -80,12 +88,19 @@ function Dashboard() {
                     if (task.status === "uncompleted") {
                       return (
                         <div className="shadow-md p-2 rounded-md bg-white h-fit mb-1.5">
-                          <div
-                            className="font-semibold cursor-pointer"
-                            onClick={() => openTask({ task, item })}
-                          >
-                            {task.title}
+                          <div className="flex justify-between">
+                            <div
+                              className="font-semibold cursor-pointer"
+                              onClick={() => openTask({ task, item })}
+                            >
+                              {task.title}
+                            </div>
+                            <div><FiberManualRecordIcon style={{
+                              color: '#ff0000a1',
+                              height: '14px'
+                            }} /></div>
                           </div>
+
                           <div className="mt-1.5">{task.description}</div>
                           {/* {item.tasks.length > 1 ? (
                         <ul>
