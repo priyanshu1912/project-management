@@ -1,20 +1,17 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { users } from "../../Mock-data";
+import { users as allUsers } from "../../Mock-data";
 
 function AdminHomepage() {
   const { state } = useLocation();
   const navigate = useNavigate();
-  console.log("state", users);
   const user = state;
 
-  let allUsers = users;
+  // let allUsers = users;
 
   const openUserDashboard = (user) => {
     navigate(`/user/${user.id}`, { state: user });
-
-    console.log(user);
   };
 
   allUsers.map((user) => {
@@ -33,7 +30,7 @@ function AdminHomepage() {
   return (
     <div className='py-3 px-3'>
       <div className='grid grid-cols-3 gap-2 w-full text-sm mt-2'>
-        {users?.map((item) => {
+        {allUsers?.map((item) => {
           return (
             <div
               className='bg-gray-100 shadow-sm rounded-md py-2 px-2'

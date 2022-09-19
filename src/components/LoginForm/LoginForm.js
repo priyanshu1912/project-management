@@ -59,9 +59,15 @@ export default function AuthenticationPage(props) {
   const handleSubmit = () => {
     props.setFlag(true);
     let user = users.filter((item) => item.email === email);
-    console.log(user);
-    if (props.title === "Admin") navigate("/adminhomepage", { state: user[0] });
-    else navigate("/homepage", { state: user[0] });
+
+    localStorage.setItem("user_id", user[0].id);
+    if (props.title === "Admin") {
+      localStorage.setItem("user_role", "admin");
+      navigate("/adminhomepage", { state: user[0] });
+    } else {
+      localStorage.setItem("user_role", "user");
+      navigate("/homepage", { state: user[0] });
+    }
   };
 
   return (
