@@ -5,7 +5,7 @@ import Modal from "../../components/Modal";
 function Homepage() {
   const { state } = useLocation();
   const navigate = useNavigate();
-  console.log(state);
+  console.log("state", state);
   const user = state;
 
   const [cols, setCols] = useState([]);
