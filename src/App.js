@@ -32,12 +32,10 @@ function App() {
   const [ticketData, setTicketData] = useState(initial);
 
   const saveTicket = () => {
-    //console.log(ticketData);
     cols[currentIndex][currentActivity].push(ticketData);
     setTicketData(initial);
     setTicketModal(false);
   };
-  console.log("flag", flag);
 
   return (
     <>
@@ -74,15 +72,24 @@ function App() {
             flag ? (
               <>
                 <Route path='/dashboard' element={<Dashboard />} />
+                <Route path='/user/:id/project/:pid' element={<Dashboard />} />
                 <Route path='/homepage' element={<Homepage />} />
                 <Route path='/user/:id' element={<Homepage />} />
                 <Route path='/adminhomepage' element={<AdminHomepage />} />
                 <Route path='/task' element={<TaskPage />} />
+                <Route
+                  path='/user/:id/project/:pid/task/:tid'
+                  element={<TaskPage />}
+                />
               </>
             ) : (
               <>
                 <Route
                   path='/dashboard'
+                  element={<Navigate to={`/auth/loginAdmin`} replace />}
+                />
+                <Route
+                  path='/user/:id/project/:pid'
                   element={<Navigate to={`/auth/loginAdmin`} replace />}
                 />
                 <Route
@@ -99,6 +106,10 @@ function App() {
                 />
                 <Route
                   path='/task'
+                  element={<Navigate to={`/auth/loginAdmin`} replace />}
+                />
+                <Route
+                  path='/user/:id/project/:pid/task/:tid'
                   element={<Navigate to={`/auth/loginAdmin`} replace />}
                 />
               </>

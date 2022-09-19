@@ -82,6 +82,7 @@ export const users = [
     password: "anand",
     projects: [
       {
+        id: "11",
         project_name: "Client coordination",
         latest_completion_count: 5,
         latest_comments_count: 3,
@@ -90,6 +91,7 @@ export const users = [
             task_list_name: "Admin dashboard",
             tasks: [
               {
+                id: "111",
                 title:
                   "When a admin login, show the list of users(home page for admin)",
                 description: [
@@ -102,6 +104,7 @@ export const users = [
                 status: "uncompleted",
               },
               {
+                id: "112",
                 title:
                   "On clicking the user card, show all the projects of that user",
                 description: [
@@ -116,6 +119,7 @@ export const users = [
             task_list_name: "Client dashboard",
             tasks: [
               {
+                id: "113",
                 title:
                   "Add a green tick instead of dots on the list of completed today and completed this week",
                 description: ["use if there is no other icon package"],
@@ -128,12 +132,14 @@ export const users = [
             task_list_name: "Responsive",
             tasks: [
               {
+                id: "114",
                 title: "Make the dashboard page mobile responsive",
                 description: ["did you check the project name of this task?"],
                 comments: [{}],
                 status: "uncompleted",
               },
               {
+                id: "115",
                 title: "Make the modal mobile responsive",
                 description: ["Click on the add new to open the modals."],
                 comments: [{}],
@@ -152,6 +158,7 @@ export const users = [
     password: "sakil",
     projects: [
       {
+        id: "21",
         project_name: "Tower App",
         latest_completion_count: 3,
         latest_comments_count: 9,
@@ -160,6 +167,7 @@ export const users = [
             task_list_name: "Nodles - Micro UI",
             tasks: [
               {
+                id: "211",
                 title: "Input widget: Measurement Location Selector",
                 description: [
                   "This widget helps select a location from a dropdown",
@@ -168,6 +176,7 @@ export const users = [
                 status: "uncompleted",
               },
               {
+                id: "212",
                 title: "Feat/QueryBuilder branch NPM issues",
                 description: [
                   "Need to wrap this up quickly. Can't we run react-querybuilder in version 17",
@@ -181,6 +190,7 @@ export const users = [
             task_list_name: "Profile page review",
             tasks: [
               {
+                id: "213",
                 title: "Wrong date picker in profiler page",
                 description: [
                   "No the datepicker is same , there is diffrent custom styling applied there . Will figure it out",
@@ -201,6 +211,7 @@ export const users = [
     password: "priyanshu",
     projects: [
       {
+        id: "31",
         project_name: "Redwing",
         latest_completion_count: 5,
         latest_comments_count: 3,
@@ -209,6 +220,7 @@ export const users = [
             task_list_name: "time tracking using ETA",
             tasks: [
               {
+                id: "311",
                 title:
                   "Adding new command to flag a task for counting the defects of the developer and the team lead",
                 description: [
@@ -220,6 +232,7 @@ export const users = [
                 status: "uncompleted",
               },
               {
+                id: "312",
                 title: "Check daily slowdown of a user",
                 description: [
                   "we can track the slowdown by finding the difference between the two activities. If the difference is more than 3 hours then it will be calculated as a slowdown.",
@@ -228,6 +241,7 @@ export const users = [
                 status: "uncompleted",
               },
               {
+                id: "313",
                 title: "Past performance report changes",
                 description: [
                   "show bar chart only in the weekly tab and remove bar chart from the monthly tab",
@@ -236,6 +250,7 @@ export const users = [
                 status: "completed",
               },
               {
+                id: "314",
                 title:
                   "Remove the full screen loader and show it in right top corner of the screen, so that when the api is loading, still we can perform action of checking performance etc",
                 description: ["!add_budget 0.5"],
@@ -248,6 +263,7 @@ export const users = [
             task_list_name: "setup",
             tasks: [
               {
+                id: "315",
                 title:
                   "Setup project locally, send me Github username, will invite to the repository.dding new command to flag a task for counting the defects of the developer and the team lead",
                 description: ["invitation sent"],
@@ -260,6 +276,7 @@ export const users = [
             task_list_name: "rapid estimation",
             tasks: [
               {
+                id: "316",
                 title: "API to login in",
                 description: [
                   "add a new table on the current database for the user list. This is not same as the current user list.",
@@ -268,12 +285,14 @@ export const users = [
                 status: "uncompleted",
               },
               {
+                id: "317",
                 title: "API Integartion to login in",
                 description: ["What is the API for login integration?"],
                 comments: [{}],
                 status: "uncompleted",
               },
               {
+                id: "318",
                 title: "API to create and update projects",
                 description: [
                   "These are not the projects currently in the project list check this UI, currently, it's using local storage and a flat-file. We need to convert it to the cloud. This is the flat file.",
@@ -286,6 +305,7 @@ export const users = [
         ],
       },
       {
+        id: "32",
         project_name: "GroTrack",
         latest_completion_count: 11,
         latest_comments_count: 14,
@@ -294,6 +314,7 @@ export const users = [
             task_list_name: "hydrafacial survey and consent",
             tasks: [
               {
+                id: "321",
                 title:
                   "In the survey form, add number for each question, make the radio of text clickable so when the text is clicked the radio should get toogle and make the radio button bigger",
                 description: ["yes, but add it only in last form"],
@@ -301,6 +322,7 @@ export const users = [
                 status: "uncompleted",
               },
               {
+                id: "322",
                 title:
                   "Please add red highlighted text in the hydrafacial survey form and logic of yellow highlighted text.",
                 description: [
@@ -315,6 +337,7 @@ export const users = [
             task_list_name: "glo track",
             tasks: [
               {
+                id: "323",
                 title:
                   "please click all arrows next to the images. some of the arrows when clicked, the screen goes blank.",
                 description: [
@@ -324,6 +347,7 @@ export const users = [
                 status: "uncompleted",
               },
               {
+                id: "324",
                 title: "Fixing the carry forward budget",
                 description: [""],
                 comments: [{}],
@@ -334,6 +358,7 @@ export const users = [
         ],
       },
       {
+        id: "33",
         project_name: "Intern Portal",
         latest_completion_count: 3,
         latest_comments_count: 1,
@@ -342,6 +367,7 @@ export const users = [
             task_list_name: "feedback cycle",
             tasks: [
               {
+                id: "331",
                 title: "Burndown - Feedback 5",
                 description: [
                   "Employer Dashboard: the links of my curriculums, my hired talents and search for a new talent should be in top navigation and not in the sidebar",
@@ -350,6 +376,7 @@ export const users = [
                 status: "uncompleted",
               },
               {
+                id: "332",
                 title:
                   "Student Dashboard: On single course page, make the spacing consistent, check the attached video at timestamp 5:53",
                 description: [
@@ -364,6 +391,7 @@ export const users = [
             task_list_name: "Common screens",
             tasks: [
               {
+                id: "333",
                 title: "All available courses page",
                 description: [
                   "Template to embed list of courses. (Use left sections). The right section will be used to place the filter widget.",
@@ -372,6 +400,7 @@ export const users = [
                 status: "uncompleted",
               },
               {
+                id: "334",
                 title: "Course View Experience - View a single course",
                 description: [
                   "You can separate components in a separate file. But both will be shown on the same page",
