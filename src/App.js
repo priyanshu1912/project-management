@@ -20,6 +20,7 @@ let initial = {
   description: "",
   file: "",
 };
+
 function App() {
   const [cols, setCols] = useState([]);
   const [openModal, setOpenModal] = useState(false);
@@ -74,6 +75,7 @@ function App() {
               <>
                 <Route path='/dashboard' element={<Dashboard />} />
                 <Route path='/homepage' element={<Homepage />} />
+                <Route path='/user/:id' element={<Homepage />} />
                 <Route path='/adminhomepage' element={<AdminHomepage />} />
                 <Route path='/task' element={<TaskPage />} />
               </>
@@ -85,6 +87,10 @@ function App() {
                 />
                 <Route
                   path='/homepage'
+                  element={<Navigate to={`/auth/loginAdmin`} replace />}
+                />
+                <Route
+                  path='/user/:id'
                   element={<Navigate to={`/auth/loginAdmin`} replace />}
                 />
                 <Route

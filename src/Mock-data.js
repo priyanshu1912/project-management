@@ -76,6 +76,7 @@ export const completedTasks = [
 
 export const users = [
   {
+    id: "1",
     name: "Anand Bhagat",
     email: "anand@gmail.com",
     password: "anand",
@@ -91,19 +92,21 @@ export const users = [
               {
                 title:
                   "When a admin login, show the list of users(home page for admin)",
-                description:
-                  ["show the count of total latest comments on all the projects of that user"],
+                description: [
+                  "show the count of total latest comments on all the projects of that user",
+                ],
                 comments: [
-                   "this is another tst comment",
-                   "this is another tst comment"
+                  "this is another tst comment",
+                  "this is another tst comment",
                 ],
                 status: "uncompleted",
               },
               {
                 title:
                   "On clicking the user card, show all the projects of that user",
-                description:
-                  ["show the count of total latest completion marked on that project"],
+                description: [
+                  "show the count of total latest completion marked on that project",
+                ],
                 comments: [{}],
                 status: "uncompleted",
               },
@@ -143,6 +146,7 @@ export const users = [
     ],
   },
   {
+    id: "2",
     name: "Sakil Alam",
     email: "sakil@gmail.com",
     password: "sakil",
@@ -157,15 +161,17 @@ export const users = [
             tasks: [
               {
                 title: "Input widget: Measurement Location Selector",
-                description:
-                  ["This widget helps select a location from a dropdown"],
+                description: [
+                  "This widget helps select a location from a dropdown",
+                ],
                 comments: [{}],
                 status: "uncompleted",
               },
               {
                 title: "Feat/QueryBuilder branch NPM issues",
-                description:
-                  ["Need to wrap this up quickly. Can't we run react-querybuilder in version 17"],
+                description: [
+                  "Need to wrap this up quickly. Can't we run react-querybuilder in version 17",
+                ],
                 comments: [{}],
                 status: "completed",
               },
@@ -176,8 +182,9 @@ export const users = [
             tasks: [
               {
                 title: "Wrong date picker in profiler page",
-                description:
-                  ["No the datepicker is same , there is diffrent custom styling applied there . Will figure it out"],
+                description: [
+                  "No the datepicker is same , there is diffrent custom styling applied there . Will figure it out",
+                ],
                 comments: [{}],
                 status: "uncompleted",
               },
@@ -188,6 +195,7 @@ export const users = [
     ],
   },
   {
+    id: "3",
     name: "Priyanshu Bhardwaj",
     email: "priyanshu@gmail.com",
     password: "priyanshu",
@@ -213,15 +221,17 @@ export const users = [
               },
               {
                 title: "Check daily slowdown of a user",
-                description:
-                  ["we can track the slowdown by finding the difference between the two activities. If the difference is more than 3 hours then it will be calculated as a slowdown."],
+                description: [
+                  "we can track the slowdown by finding the difference between the two activities. If the difference is more than 3 hours then it will be calculated as a slowdown.",
+                ],
                 comments: [{}],
                 status: "uncompleted",
               },
               {
                 title: "Past performance report changes",
-                description:
-                  ["show bar chart only in the weekly tab and remove bar chart from the monthly tab"],
+                description: [
+                  "show bar chart only in the weekly tab and remove bar chart from the monthly tab",
+                ],
                 comments: [{}],
                 status: "completed",
               },
@@ -251,8 +261,9 @@ export const users = [
             tasks: [
               {
                 title: "API to login in",
-                description:
-                  ["add a new table on the current database for the user list. This is not same as the current user list."],
+                description: [
+                  "add a new table on the current database for the user list. This is not same as the current user list.",
+                ],
                 comments: [{}],
                 status: "uncompleted",
               },
@@ -264,8 +275,9 @@ export const users = [
               },
               {
                 title: "API to create and update projects",
-                description:
-                  ["These are not the projects currently in the project list check this UI, currently, it's using local storage and a flat-file. We need to convert it to the cloud. This is the flat file."],
+                description: [
+                  "These are not the projects currently in the project list check this UI, currently, it's using local storage and a flat-file. We need to convert it to the cloud. This is the flat file.",
+                ],
                 comments: [{}],
                 status: "uncompleted",
               },
@@ -291,8 +303,9 @@ export const users = [
               {
                 title:
                   "Please add red highlighted text in the hydrafacial survey form and logic of yellow highlighted text.",
-                description:
-                  ["Yellow highlighted logic is clear, Red text means those are required?"],
+                description: [
+                  "Yellow highlighted logic is clear, Red text means those are required?",
+                ],
                 comments: [{}],
                 status: "completed",
               },
@@ -304,8 +317,9 @@ export const users = [
               {
                 title:
                   "please click all arrows next to the images. some of the arrows when clicked, the screen goes blank.",
-                description:
-                  ["if the image is not available show msg like the below"],
+                description: [
+                  "if the image is not available show msg like the below",
+                ],
                 comments: [{}],
                 status: "uncompleted",
               },
@@ -329,16 +343,18 @@ export const users = [
             tasks: [
               {
                 title: "Burndown - Feedback 5",
-                description:
-                  ["Employer Dashboard: the links of my curriculums, my hired talents and search for a new talent should be in top navigation and not in the sidebar"],
+                description: [
+                  "Employer Dashboard: the links of my curriculums, my hired talents and search for a new talent should be in top navigation and not in the sidebar",
+                ],
                 comments: [{}],
                 status: "uncompleted",
               },
               {
                 title:
                   "Student Dashboard: On single course page, make the spacing consistent, check the attached video at timestamp 5:53",
-                description:
-                  ["I have added an extra budget, so check all the other pages for the spacing issue and fixed it. Mentioned all the pages list in which you will be fixing the spacing issue. Will increase the budget accordingly."],
+                description: [
+                  "I have added an extra budget, so check all the other pages for the spacing issue and fixed it. Mentioned all the pages list in which you will be fixing the spacing issue. Will increase the budget accordingly.",
+                ],
                 comments: [{}],
                 status: "completed",
               },
@@ -349,15 +365,17 @@ export const users = [
             tasks: [
               {
                 title: "All available courses page",
-                description:
-                  ["Template to embed list of courses. (Use left sections). The right section will be used to place the filter widget."],
+                description: [
+                  "Template to embed list of courses. (Use left sections). The right section will be used to place the filter widget.",
+                ],
                 comments: [{}],
                 status: "uncompleted",
               },
               {
                 title: "Course View Experience - View a single course",
-                description:
-                  ["You can separate components in a separate file. But both will be shown on the same page"],
+                description: [
+                  "You can separate components in a separate file. But both will be shown on the same page",
+                ],
                 comments: [{}],
                 status: "completed",
               },

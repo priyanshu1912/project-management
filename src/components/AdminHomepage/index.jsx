@@ -11,8 +11,10 @@ function AdminHomepage() {
 
   let allUsers = users;
 
-  const openProject = (project) => {
-    navigate("/dashboard", { state: { project, user: { name: user.name } } });
+  const openUserDashboard = (user) => {
+    navigate(`/user/${user.id}`, { state: user });
+
+    console.log(user);
   };
 
   allUsers.map((user) => {
@@ -30,11 +32,12 @@ function AdminHomepage() {
 
   return (
     <div className='py-3 px-3'>
-      {/* <div className='font-bold'>{user?.name}</div> */}
       <div className='grid grid-cols-3 gap-2 w-full text-sm mt-2'>
         {users?.map((item) => {
           return (
-            <div className='bg-gray-100 shadow-sm rounded-md py-2 px-2 '>
+            <div
+              className='bg-gray-100 shadow-sm rounded-md py-2 px-2'
+              onClick={() => openUserDashboard(item)}>
               <div className='font-semibold cursor-pointer w-fit'>
                 {item.name}
               </div>
