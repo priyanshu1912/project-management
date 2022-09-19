@@ -6,14 +6,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
-<<<<<<< HEAD:src/components/Dashboard.js
-=======
-let initial = {
-  title: "",
-  description: "",
-  file: "",
-};
->>>>>>> aaee7b400589f6dba40b9ea48e2b3ee6fa356969:src/components/Dashboard/index.jsx
 function Dashboard() {
   const { state } = useLocation();
   const navigate = useNavigate();
@@ -35,23 +27,16 @@ function Dashboard() {
   const [tasks, setTasks] = useState([]);
 
   const saveTicket = () => {
-<<<<<<< HEAD:src/components/Dashboard.js
     let temp = ticketData;
     temp.activity = currentActivity;
     setTasks([...tasks, temp]);
-=======
-    cols[currentIndex][currentActivity].push(ticketData);
->>>>>>> aaee7b400589f6dba40b9ea48e2b3ee6fa356969:src/components/Dashboard/index.jsx
     setTicketData(initial);
     setTicketModal(false);
   };
 
-<<<<<<< HEAD:src/components/Dashboard.js
   console.log({ cols }, { tasks });
 
   //console.log(dashboardData);
-=======
->>>>>>> aaee7b400589f6dba40b9ea48e2b3ee6fa356969:src/components/Dashboard/index.jsx
   const project = state?.project;
   const userName = state?.user.name;
   const userId = state?.user.id;
@@ -70,21 +55,12 @@ function Dashboard() {
 
   return (
     <>
-<<<<<<< HEAD:src/components/Dashboard.js
       <div className="py-3 px-3">
         <div className="flex justify-between">
           <div className="font-bold">
             {userName} - {project?.project_name}
           </div>
           <div className="icon">
-=======
-      <div className='py-3 px-3'>
-        <div className='flex justify-between'>
-          <div className='font-bold'>
-            {userName} - {project?.project_name}
-          </div>
-          <div className='icon'>
->>>>>>> aaee7b400589f6dba40b9ea48e2b3ee6fa356969:src/components/Dashboard/index.jsx
             <NotificationsIcon />
           </div>
         </div>
@@ -115,16 +91,10 @@ function Dashboard() {
               return (
                 <div
                   key={index}
-<<<<<<< HEAD:src/components/Dashboard.js
                   className="bg-gray-100 shadow-sm rounded-md py-2 px-2 w-1/3 sm:w-full shrink-0"
                 >
                   <div className="mb-3 font-semibold px-1 uppercase">
                     {name}
-=======
-                  className='bg-gray-100 shadow-sm rounded-md py-2 px-2 w-1/3 sm:w-full shrink-0'>
-                  <div className='mb-3 font-semibold px-1 uppercase'>
-                    {item.task_list_name}
->>>>>>> aaee7b400589f6dba40b9ea48e2b3ee6fa356969:src/components/Dashboard/index.jsx
                   </div>
                   {item.tasks.map((task) => {
                     if (task.status === "uncompleted") {
@@ -146,29 +116,7 @@ function Dashboard() {
                             </div>
                           </div>
 
-<<<<<<< HEAD:src/components/Dashboard.js
                           <div className="mt-1.5">{task.description}</div>
-=======
-                          <div className='mt-1.5'>{task.description}</div>
-                          {/* {item.tasks.length > 1 ? (
-                        <ul>
-                          {item.description.map((x, index) => {
-                            return (
-                              <div>
-                                {index + 1}. {x}
-                              </div>
-                            );
-                          })}
-                        </ul>
-                      ) : (
-                        <textarea
-                          rows={4}
-                          className="mt-1.5 resize-none new-class"
-                        >
-                          {item.description}
-                        </textarea>
-                      )} */}
->>>>>>> aaee7b400589f6dba40b9ea48e2b3ee6fa356969:src/components/Dashboard/index.jsx
                         </div>
                       );
                     }
@@ -214,7 +162,6 @@ function Dashboard() {
                 </div>
               );
             })}
-<<<<<<< HEAD:src/components/Dashboard.js
             {cols?.map((item) => {
               let activity = Object.keys(item);
               let name = console.log(activity[0]);
@@ -297,12 +244,6 @@ function Dashboard() {
               >
                 <div className="font-semibold px-1 text-center">ADD NEW</div>
               </div>
-=======
-            <div
-              onClick={() => setOpenModal(!openModal)}
-              className='bg-gray-100 shadow-sm rounded-md py-4 px-2 w-1/3 shrink-0 h-fit cursor-pointer '>
-              <div className='font-semibold px-1 text-center'>ADD NEW</div>
->>>>>>> aaee7b400589f6dba40b9ea48e2b3ee6fa356969:src/components/Dashboard/index.jsx
             </div>
           </div>
           <div className='w-1/4 sm:w-full bg-gray-100 rounded-md py-4 px-1.5'>
