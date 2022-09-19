@@ -3,15 +3,9 @@ import { useState } from "react";
 import Modal from "../components/Modal";
 import TicketModal from "../components/TicketModal";
 import { useLocation, useNavigate } from "react-router-dom";
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import NotificationsIcon from "@mui/icons-material/Notifications";
 
-
-let initial = {
-  title: "",
-  description: "",
-  file: "",
-};
 function Dashboard() {
   const { state } = useLocation();
   const navigate = useNavigate();
@@ -22,14 +16,25 @@ function Dashboard() {
 
   const [currentIndex, setCurrentIndex] = useState("");
   const [currentActivity, setCurrentActivity] = useState("");
+  let initial = {
+    activity: "",
+    title: "",
+    description: "",
+    file: "",
+  };
   const [ticketData, setTicketData] = useState(initial);
 
+  const [tasks, setTasks] = useState([]);
+
   const saveTicket = () => {
-    //console.log(ticketData);
-    cols[currentIndex][currentActivity].push(ticketData);
+    let temp = ticketData;
+    temp.activity = currentActivity;
+    setTasks([...tasks, temp]);
     setTicketData(initial);
     setTicketModal(false);
   };
+
+  console.log({ cols }, { tasks });
 
   //console.log(dashboardData);
   const project = state?.project;
@@ -47,12 +52,12 @@ function Dashboard() {
     <>
       <div className="py-3 px-3">
         <div className="flex justify-between">
-        <div className="font-bold">
-          {userName} - {project?.project_name}
-        </div>
-        <div className="icon">
-          <NotificationsIcon />
-        </div>
+          <div className="font-bold">
+            {userName} - {project?.project_name}
+          </div>
+          <div className="icon">
+            <NotificationsIcon />
+          </div>
         </div>
         <div className="text-sm bg-white w-full min-h-screen flex sm:flex-col gap-3 mt-2">
           {openModal && (
@@ -72,17 +77,19 @@ function Dashboard() {
               ticketData={ticketData}
               setTicketData={setTicketData}
               saveTicket={saveTicket}
+              currentActivity={currentActivity}
             />
           )}
           <div className="w-9/12 sm:w-full flex gap-2 rounded-md overflow-auto scroll-smooth hide-scrollbar">
             {project?.task_lists.map((item, index) => {
+              let name = item.task_list_name;
               return (
                 <div
                   key={index}
                   className="bg-gray-100 shadow-sm rounded-md py-2 px-2 w-1/3 sm:w-full shrink-0"
                 >
                   <div className="mb-3 font-semibold px-1 uppercase">
-                    {item.task_list_name}
+                    {name}
                   </div>
                   {item.tasks.map((task) => {
                     if (task.status === "uncompleted") {
@@ -95,53 +102,144 @@ function Dashboard() {
                             >
                               {task.title}
                             </div>
-                            <div><FiberManualRecordIcon style={{
-                              color: '#ff0000a1',
-                              height: '14px'
-                            }} /></div>
+                            <div>
+                              <FiberManualRecordIcon
+                                style={{
+                                  color: "#ff0000a1",
+                                  height: "14px",
+                                }}
+                              />
+                            </div>
                           </div>
 
                           <div className="mt-1.5">{task.description}</div>
-                          {/* {item.tasks.length > 1 ? (
-                        <ul>
-                          {item.description.map((x, index) => {
-                            return (
-                              <div>
-                                {index + 1}. {x}
-                              </div>
-                            );
-                          })}
-                        </ul>
-                      ) : (
-                        <textarea
-                          rows={4}
-                          className="mt-1.5 resize-none new-class"
-                        >
-                          {item.description}
-                        </textarea>
-                      )} */}
                         </div>
                       );
                     }
                   })}
-                  {/* <div
-                onClick={() => {
-                  setCurrentIndex(index);
-                  setCurrentActivity(activity);
-                  setTicketModal(!ticketModal);
-                }}
-                className="bg-white shadow-md rounded-md py-4 px-2 w-full shrink-0 h-fit cursor-pointer "
-              >
-                <div className="font-semibold px-1 text-center">ADD NEW</div>
-              </div> */}
+                  {tasks?.map((item) => {
+                    if (item.activity === name) {
+                      return (
+                        <div className="shadow-md p-2 rounded-md bg-white h-fit mb-1.5">
+                          <div className="flex justify-between">
+                            <div
+                              className="font-semibold cursor-pointer"
+                              //onClick={() => openTask({ task, item })}
+                            >
+                              {item.title}
+                            </div>
+                            <div>
+                              <FiberManualRecordIcon
+                                style={{
+                                  color: "#ff0000a1",
+                                  height: "14px",
+                                }}
+                              />
+                            </div>
+                          </div>
+
+                          <div className="mt-1.5">{item.description}</div>
+                        </div>
+                      );
+                    }
+                  })}
+                  <div
+                    onClick={() => {
+                      //setCurrentIndex(index);
+                      setCurrentActivity(item.task_list_name);
+                      setTicketModal(!ticketModal);
+                    }}
+                    className="bg-white shadow-md rounded-md py-4 px-2 w-full shrink-0 h-fit cursor-pointer "
+                  >
+                    <div className="font-semibold px-1 text-center">
+                      ADD NEW
+                    </div>
+                  </div>
                 </div>
               );
             })}
-            <div
-              onClick={() => setOpenModal(!openModal)}
-              className="bg-gray-100 shadow-sm rounded-md py-4 px-2 w-1/3 shrink-0 h-fit cursor-pointer "
-            >
-              <div className="font-semibold px-1 text-center">ADD NEW</div>
+            {cols?.map((item) => {
+              let activity = Object.keys(item);
+              let name = console.log(activity[0]);
+              return (
+                <div className="bg-gray-100 shadow-sm rounded-md py-2 px-2 w-1/3 sm:w-full shrink-0">
+                  <div className="mb-3 font-semibold px-1 uppercase">
+                    {activity}
+                  </div>
+                  {/* {item[activity].map((task) => {
+                    if (task.status === "uncompleted") {
+                      return (
+                        <div className="shadow-md p-2 rounded-md bg-white h-fit mb-1.5">
+                          <div className="flex justify-between">
+                            <div
+                              className="font-semibold cursor-pointer"
+                              onClick={() => openTask({ task, item })}
+                            >
+                              {task.title}
+                            </div>
+                            <div>
+                              <FiberManualRecordIcon
+                                style={{
+                                  color: "#ff0000a1",
+                                  height: "14px",
+                                }}
+                              />
+                            </div>
+                          </div>
+
+                          <div className="mt-1.5">{task.description}</div>
+                        </div>
+                      );
+                    }
+                  })} */}
+                  {tasks?.map((item) => {
+                    if (item.activity === name) {
+                      return (
+                        <div className="shadow-md p-2 rounded-md bg-white h-fit mb-1.5">
+                          <div className="flex justify-between">
+                            <div
+                              className="font-semibold cursor-pointer"
+                              //onClick={() => openTask({ task, item })}
+                            >
+                              {item.title}
+                            </div>
+                            <div>
+                              <FiberManualRecordIcon
+                                style={{
+                                  color: "#ff0000a1",
+                                  height: "14px",
+                                }}
+                              />
+                            </div>
+                          </div>
+
+                          <div className="mt-1.5">{item.description}</div>
+                        </div>
+                      );
+                    }
+                  })}
+                  <div
+                    onClick={() => {
+                      //setCurrentIndex(index);
+                      setCurrentActivity(name);
+                      setTicketModal(!ticketModal);
+                    }}
+                    className="bg-white shadow-md rounded-md py-4 px-2 w-full shrink-0 h-fit cursor-pointer "
+                  >
+                    <div className="font-semibold px-1 text-center">
+                      ADD NEW
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+            <div className="bg-gray-100 shadow-sm rounded-md py-2 px-2 w-1/3 sm:w-full shrink-0 h-fit">
+              <div
+                onClick={() => setOpenModal(!openModal)}
+                className="bg-white shadow-sm rounded-md py-4 px-2 w-full shrink-0 h-fit cursor-pointer shadow-md"
+              >
+                <div className="font-semibold px-1 text-center">ADD NEW</div>
+              </div>
             </div>
           </div>
           <div className="w-1/4 sm:w-full bg-gray-100 rounded-md py-4 px-1.5">

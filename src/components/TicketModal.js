@@ -6,6 +6,7 @@ function TicketModal({
   ticketModal,
   setTicketModal,
   saveTicket,
+  currentActivity,
 }) {
   return (
     <div

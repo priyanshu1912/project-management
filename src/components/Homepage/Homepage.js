@@ -72,12 +72,12 @@ function Homepage() {
               </div>
             );
           })}
-          <div
+          {/* <div
             onClick={() => setOpenModal(!openModal)}
             className="bg-gray-100 shadow-sm rounded-md py-4 px-2 w-full shrink-0 h-fit cursor-pointer "
           >
             <div className="font-semibold px-1 text-center">ADD NEW</div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
