@@ -1,13 +1,14 @@
 import "../../App.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Modal from "../Modal";
 import TicketModal from "../TicketModal";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate,useParams } from "react-router-dom";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import {users} from '../../Mock-data.js'
 
 function Dashboard() {
-  const { state } = useLocation();
+  const {id, pid} = useParams()
   const navigate = useNavigate();
   const [cols, setCols] = useState([]);
   const [openModal, setOpenModal] = useState(false);
@@ -37,18 +38,29 @@ function Dashboard() {
   console.log({ cols }, { tasks });
 
   //console.log(dashboardData);
-  const project = state?.project;
-  const userName = state?.user.name;
-  const userId = state?.user.id;
+  // const project = state?.project;
+  // const userName = state?.user.name;
+  // const userId = state?.user.id;
+
+  const [user, setUser] = useState(null)
+  const [project,setProject] = useState(null)
+
+  useEffect(() => {
+    let data = users.filter(item => item.id === id)[0]
+    setUser(data) 
+    console.log(data)
+    let project = data.projects.filter(item => item.id === pid)[0]
+    setProject(project)
+  },[id,pid])
 
   const openTask = (task) => {
     if (localStorage.getItem("user_role") === "admin") {
-      navigate(`/user/${userId}/project/${project.id}/task/${task.task.id}`, {
-        state: { task, userName, project_name: project.project_name },
+      navigate(`/user/${id}/project/${project.id}/task/${task.task.id}`, {
+        //state: { task, userName, project_name: project.project_name },
       });
     } else {
-      navigate("/task", {
-        state: { task, userName, project_name: project.project_name },
+      navigate(`/user/${id}/project/${project.id}/task/${task.task.id}`, {
+        //state: { task, userName, project_name: project.project_name },
       });
     }
   };
@@ -58,7 +70,7 @@ function Dashboard() {
       <div className="py-3 px-3">
         <div className="flex justify-between">
           <div className="font-bold">
-            {userName} - {project?.project_name}
+            {user?.name} - {project?.project_name}
           </div>
           <div className="icon">
             <NotificationsIcon />

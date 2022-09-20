@@ -1,15 +1,21 @@
-import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import Modal from "../../components/Modal";
+import { users } from "../../Mock-data.js";
 
 function Homepage() {
-  const { state } = useLocation();
+  const { id } = useParams();
   const navigate = useNavigate();
-  const user = state;
 
   const [cols, setCols] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [text, setText] = useState("");
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    let data = users.filter((item) => item.id === id);
+    setUser(data[0]);
+  }, [id]);
 
   const openProject = (project) => {
     if (localStorage.getItem("user_role") === "admin") {
@@ -17,9 +23,7 @@ function Homepage() {
         state: { project, user: { name: user.name, id: user.id } },
       });
     } else {
-      navigate("/dashboard", {
-        state: { project, user: { name: user.name, id: user.id } },
-      });
+      navigate(`/user/${user.id}/project/${project.id}`);
     }
   };
 
