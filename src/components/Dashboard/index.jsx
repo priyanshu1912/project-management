@@ -76,7 +76,7 @@ function Dashboard() {
             <NotificationsIcon />
           </div>
         </div>
-        <div className='text-sm bg-white w-full min-h-screen flex sm:flex-col gap-3 mt-2'>
+        <div className='text-sm bg-white w-full flex sm:flex-col gap-3 mt-2'>
           {openModal && (
             <Modal
               openModal={openModal}
@@ -103,7 +103,7 @@ function Dashboard() {
               return (
                 <div
                   key={index}
-                  className="bg-gray-100 shadow-sm rounded-md py-2 px-2 w-1/3 sm:w-full shrink-0"
+                  className="bg-gray-100 shadow-sm rounded-md py-2 px-2 w-1/3 sm:w-full h-fit shrink-0"
                 >
                   <div className="mb-3 font-semibold px-1 uppercase">
                     {name}
@@ -258,7 +258,7 @@ function Dashboard() {
               </div>
             </div>
           </div>
-          <div className='w-1/4 sm:w-full bg-gray-100 rounded-md py-4 px-1.5'>
+          <div className='w-1/4 sm:w-full bg-gray-100 rounded-md h-fit py-4 px-1.5'>
             <div className='mb-5'>
               <div className='mb-3 font-semibold px-1 uppercase'>
                 COMPLETED TODAY
