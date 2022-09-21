@@ -75,7 +75,7 @@ export default function AuthenticationPage(props) {
       className="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8"
       style={{ alignItems: "center" }}
     >
-      <div style={{ width: "35%" }}>
+      <div className="sm:w-full w-1/3">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <img
             className="mx-auto h-12 w-auto"
@@ -130,7 +130,7 @@ export default function AuthenticationPage(props) {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between">
+              <div className="flex items-center sm:flex-col justify-between">
                 <div className="flex items-center">
                   <input
                     id="remember-me"
