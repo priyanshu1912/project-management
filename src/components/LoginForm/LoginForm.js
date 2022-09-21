@@ -72,10 +72,9 @@ export default function AuthenticationPage(props) {
 
   return (
     <div
-      className="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8"
-      style={{ alignItems: "center" }}
+      className="min-h-full flex flex-col justify-center py-12"
     >
-      <div className="sm:w-full w-1/3">
+      <div className="sm:w-full w-1/3 mx-auto">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <img
             className="mx-auto h-12 w-auto"
@@ -88,7 +87,7 @@ export default function AuthenticationPage(props) {
         </div>
 
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+          <div className="bg-white py-8 px-4 sm:rounded-lg sm:px-10">
             <form className="space-y-6" action="#" method="POST">
               <div>
                 <label
