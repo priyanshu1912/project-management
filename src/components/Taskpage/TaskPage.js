@@ -122,61 +122,6 @@ function TaskPage() {
                   </div>
                 );
               })}
-            {comments.length !== 0 &&
-              comments.map((item, reviewIdx) => (
-                <div
-                  //key={review.id}
-                  className="flex text-sm text-gray-500 space-x-4"
-                >
-                  <div className="flex-none py-10">
-                    <img
-                      //src={review.avatarSrc}
-                      src="https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg"
-                      alt=""
-                      className="w-10 h-10 bg-gray-100 rounded-full"
-                    />
-                  </div>
-                  <div
-                    // className={classNames(
-                    //   reviewIdx === 0 ? "" : "border-t border-gray-200",
-                    //   "py-10"
-                    // )}
-                    className="py-10"
-                  >
-                    <h3 className="font-medium text-gray-900">
-                      {item.userName}
-                    </h3>
-                    <>
-                      {/* <time dateTime={review.datetime}>{review.date}</time> */}
-                      <div className="font-normal">{item.time}</div>
-                    </>
-
-                    <div className="flex items-center mt-4">
-                      {[0, 1, 2, 3, 4].map((rating) => (
-                        <AiFillStar
-                          color="yellow"
-                          key={rating}
-                          // className={classNames(
-                          //   review.rating > rating
-                          //     ? "text-yellow-400"
-                          //     : "text-gray-300",
-                          //   "h-5 w-5 flex-shrink-0"
-                          // )}
-                          aria-hidden="true"
-                        />
-                      ))}
-                    </div>
-                    {/* <p className="sr-only">{review.rating} out of 5 stars</p> */}
-
-                    <div
-                      className="mt-4 prose prose-sm max-w-none text-gray-500"
-                      dangerouslySetInnerHTML={{
-                        __html: item.comment,
-                      }}
-                    />
-                  </div>
-                </div>
-              ))}
           </div>
           <div className="flex items-center gap-2 mt-5">
             <img
