@@ -67,7 +67,7 @@ function Dashboard() {
 
   return (
     <>
-      <div className="py-3 px-3">
+      <div className="py-3 px-3 flex flex-col min-h-screen">
         <div className="flex justify-between">
           <div className="font-bold">
             {user?.name} - {project?.project_name}
@@ -76,7 +76,7 @@ function Dashboard() {
             <NotificationsIcon />
           </div>
         </div>
-        <div className='text-sm bg-white w-full flex sm:flex-col gap-3 mt-2'>
+        <div className='text-sm bg-white w-full flex sm:flex-col grow gap-3 mt-2'>
           {openModal && (
             <Modal
               openModal={openModal}
