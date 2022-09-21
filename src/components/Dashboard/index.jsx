@@ -72,7 +72,7 @@ function Dashboard() {
           <div className="font-bold">
             {user?.name} - {project?.project_name}
           </div>
-          <div className="icon">
+          <div className="icon cursor-pointer" onClick={()=>navigate(`/user/${user.id}/project/${project.id}/activities`)}>
             <NotificationsIcon />
           </div>
         </div>

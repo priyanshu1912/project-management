@@ -110,7 +110,7 @@ export const users = [
                 description: [
                   "show the count of total latest completion marked on that project",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
             ],
@@ -123,7 +123,7 @@ export const users = [
                 title:
                   "Add a green tick instead of dots on the list of completed today and completed this week",
                 description: ["use if there is no other icon package"],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
             ],
@@ -135,14 +135,14 @@ export const users = [
                 id: "114",
                 title: "Make the dashboard page mobile responsive",
                 description: ["did you check the project name of this task?"],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
               {
                 id: "115",
                 title: "Make the modal mobile responsive",
                 description: ["Click on the add new to open the modals."],
-                comments: [{}],
+                comments: [],
                 status: "completed",
               },
             ],
@@ -172,7 +172,7 @@ export const users = [
                 description: [
                   "This widget helps select a location from a dropdown",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
               {
@@ -181,7 +181,7 @@ export const users = [
                 description: [
                   "Need to wrap this up quickly. Can't we run react-querybuilder in version 17",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "completed",
               },
             ],
@@ -195,7 +195,7 @@ export const users = [
                 description: [
                   "No the datepicker is same , there is diffrent custom styling applied there . Will figure it out",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
             ],
@@ -228,7 +228,20 @@ export const users = [
                   "Change today's text to Today's Output",
                   "Change week's text to Week's Output",
                 ],
-                comments: [{}],
+                comments: [
+                  {
+                    userName: "Priyanshu Bhardwaj",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "This is a test comment",
+                  },
+                  {
+                    userName: "Priyanshu Bhardwaj",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "This is a another comment",
+                  },
+                ],
                 status: "uncompleted",
               },
               {
@@ -237,7 +250,7 @@ export const users = [
                 description: [
                   "we can track the slowdown by finding the difference between the two activities. If the difference is more than 3 hours then it will be calculated as a slowdown.",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
               {
@@ -246,7 +259,7 @@ export const users = [
                 description: [
                   "show bar chart only in the weekly tab and remove bar chart from the monthly tab",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "completed",
               },
               {
@@ -254,7 +267,7 @@ export const users = [
                 title:
                   "Remove the full screen loader and show it in right top corner of the screen, so that when the api is loading, still we can perform action of checking performance etc",
                 description: ["!add_budget 0.5"],
-                comments: [{}],
+                comments: [],
                 status: "completed",
               },
             ],
@@ -267,7 +280,7 @@ export const users = [
                 title:
                   "Setup project locally, send me Github username, will invite to the repository.dding new command to flag a task for counting the defects of the developer and the team lead",
                 description: ["invitation sent"],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
             ],
@@ -281,14 +294,14 @@ export const users = [
                 description: [
                   "add a new table on the current database for the user list. This is not same as the current user list.",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
               {
                 id: "317",
                 title: "API Integartion to login in",
                 description: ["What is the API for login integration?"],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
               {
@@ -297,7 +310,7 @@ export const users = [
                 description: [
                   "These are not the projects currently in the project list check this UI, currently, it's using local storage and a flat-file. We need to convert it to the cloud. This is the flat file.",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
             ],
@@ -318,7 +331,7 @@ export const users = [
                 title:
                   "In the survey form, add number for each question, make the radio of text clickable so when the text is clicked the radio should get toogle and make the radio button bigger",
                 description: ["yes, but add it only in last form"],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
               {
@@ -328,7 +341,7 @@ export const users = [
                 description: [
                   "Yellow highlighted logic is clear, Red text means those are required?",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "completed",
               },
             ],
@@ -343,14 +356,14 @@ export const users = [
                 description: [
                   "if the image is not available show msg like the below",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
               {
                 id: "324",
                 title: "Fixing the carry forward budget",
                 description: [""],
-                comments: [{}],
+                comments: [],
                 status: "completed",
               },
             ],
@@ -372,7 +385,7 @@ export const users = [
                 description: [
                   "Employer Dashboard: the links of my curriculums, my hired talents and search for a new talent should be in top navigation and not in the sidebar",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
               {
@@ -382,7 +395,7 @@ export const users = [
                 description: [
                   "I have added an extra budget, so check all the other pages for the spacing issue and fixed it. Mentioned all the pages list in which you will be fixing the spacing issue. Will increase the budget accordingly.",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "completed",
               },
             ],
@@ -396,7 +409,7 @@ export const users = [
                 description: [
                   "Template to embed list of courses. (Use left sections). The right section will be used to place the filter widget.",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "uncompleted",
               },
               {
@@ -405,7 +418,7 @@ export const users = [
                 description: [
                   "You can separate components in a separate file. But both will be shown on the same page",
                 ],
-                comments: [{}],
+                comments: [],
                 status: "completed",
               },
             ],

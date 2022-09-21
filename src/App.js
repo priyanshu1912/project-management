@@ -14,6 +14,7 @@ import Dashboard from "./components/Dashboard";
 import Homepage from "./components/Homepage/Homepage";
 import TaskPage from "./components/Taskpage/TaskPage";
 import AdminHomepage from "./components/AdminHomepage";
+import Activities from "./components/Activities/Activities";
 
 let initial = {
   title: "",
@@ -38,32 +39,32 @@ function App() {
   };
 
   return (
-    <>
+    <div className="text-sm">
       <Router>
         <Routes>
           <Route
-            path='/'
+            path="/"
             element={<Navigate to={`/auth/loginAdmin`} replace />}
           />
           <Route
-            path='/auth/loginAdmin'
+            path="/auth/loginAdmin"
             element={
               <LoginForm
                 setFlag={setFlag}
-                title='Admin'
-                child1='Admin'
-                child2='User'
+                title="Admin"
+                child1="Admin"
+                child2="User"
               />
             }
           />
           <Route
-            path='/auth/loginUser'
+            path="/auth/loginUser"
             element={
               <LoginForm
                 setFlag={setFlag}
-                title='User'
-                child1='User'
-                child2='Admin'
+                title="User"
+                child1="User"
+                child2="Admin"
               />
             }
           />
@@ -71,45 +72,46 @@ function App() {
           {
             flag ? (
               <>
-                <Route path='/dashboard' element={<Dashboard />} />
-                <Route path='/user/:id/project/:pid' element={<Dashboard />} />
-                <Route path='/homepage' element={<Homepage />} />
-                <Route path='/user/:id' element={<Homepage />} />
-                <Route path='/adminhomepage' element={<AdminHomepage />} />
-                <Route path='/task' element={<TaskPage />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/user/:id/project/:pid" element={<Dashboard />} />
+                <Route path="/homepage" element={<Homepage />} />
+                <Route path="/user/:id" element={<Homepage />} />
+                <Route path="/adminhomepage" element={<AdminHomepage />} />
+                <Route path="/task" element={<TaskPage />} />
                 <Route
-                  path='/user/:id/project/:pid/task/:tid'
+                  path="/user/:id/project/:pid/task/:tid"
                   element={<TaskPage />}
                 />
+                <Route path="user/:id/project/:pid/activities" element={<Activities />} />
               </>
             ) : (
               <>
                 <Route
-                  path='/dashboard'
+                  path="/dashboard"
                   element={<Navigate to={`/auth/loginAdmin`} replace />}
                 />
                 <Route
-                  path='/user/:id/project/:pid'
+                  path="/user/:id/project/:pid"
                   element={<Navigate to={`/auth/loginAdmin`} replace />}
                 />
                 <Route
-                  path='/homepage'
+                  path="/homepage"
                   element={<Navigate to={`/auth/loginAdmin`} replace />}
                 />
                 <Route
-                  path='/user/:id'
+                  path="/user/:id"
                   element={<Navigate to={`/auth/loginAdmin`} replace />}
                 />
                 <Route
-                  path='/adminhomepage'
+                  path="/adminhomepage"
                   element={<Navigate to={`/auth/loginAdmin`} replace />}
                 />
                 <Route
-                  path='/task'
+                  path="/task"
                   element={<Navigate to={`/auth/loginAdmin`} replace />}
                 />
                 <Route
-                  path='/user/:id/project/:pid/task/:tid'
+                  path="/user/:id/project/:pid/task/:tid"
                   element={<Navigate to={`/auth/loginAdmin`} replace />}
                 />
               </>
@@ -118,7 +120,7 @@ function App() {
           }
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 
