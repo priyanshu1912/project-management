@@ -98,8 +98,24 @@ export const users = [
                   "show the count of total latest comments on all the projects of that user",
                 ],
                 comments: [
-                  "this is another tst comment",
-                  "this is another tst comment",
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "task title is updated.",
+                  },
+                  {
+                    userName: "Priyanshu Bhardwaj",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "Have to increase the size of radio on click?",
+                  },
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "yes, but add it only in last form",
+                  },
                 ],
                 status: "uncompleted",
               },
@@ -110,7 +126,15 @@ export const users = [
                 description: [
                   "show the count of total latest completion marked on that project",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "if the image is not available show msg like the below",
+                  },
+                ],
                 status: "uncompleted",
               },
             ],
@@ -123,7 +147,14 @@ export const users = [
                 title:
                   "Add a green tick instead of dots on the list of completed today and completed this week",
                 description: ["use if there is no other icon package"],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "looks good",
+                  },
+                ],
                 status: "uncompleted",
               },
             ],
@@ -135,14 +166,41 @@ export const users = [
                 id: "114",
                 title: "Make the dashboard page mobile responsive",
                 description: ["did you check the project name of this task?"],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "looks good",
+                  },
+                ],
                 status: "uncompleted",
               },
               {
                 id: "115",
                 title: "Make the modal mobile responsive",
                 description: ["Click on the add new to open the modals."],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Priyanshu Bhardwaj",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "Need more clarity",
+                  },
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "whats your understanding?",
+                  },
+                  {
+                    userName: "Priyanshu Bhardwaj",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "Yellow highlighted logic is clear, Red text means those are required?",
+                  },
+                ],
                 status: "completed",
               },
             ],
@@ -172,7 +230,28 @@ export const users = [
                 description: [
                   "This widget helps select a location from a dropdown",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Mohd Anas",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "When we fetched the location of the measurement location successfully. We will pass this object to value as we do for other input node.",
+                  },
+                  {
+                    userName: "Mohd Anas",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "I have provided you necessary instructions to complete this task. Please follow. Let me know if you have doubts.",
+                  },
+                  {
+                    userName: "Akshay Hegde",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "color codes and icon for the UI?",
+                  },
+                ],
                 status: "uncompleted",
               },
               {
@@ -181,7 +260,28 @@ export const users = [
                 description: [
                   "Need to wrap this up quickly. Can't we run react-querybuilder in version 17",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Mohd Anas",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "Can we work on this now? Need to wrap this up quickly. Can't we run react-querybuilder in version 17",
+                  },
+                  {
+                    userName: "Debjit Pramanick",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "Will check.",
+                  },
+                  {
+                    userName: "Debjit Pramanick",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "I think react-query-builder does not support react 17 due to some import issues in react 17. So we have only one option which is to upgrade react to version 18 and upgrade other packages as well. ",
+                  },
+                ],
                 status: "completed",
               },
             ],
@@ -195,7 +295,15 @@ export const users = [
                 description: [
                   "No the datepicker is same , there is diffrent custom styling applied there . Will figure it out",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Varad Rajopadhye",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "No the datepicker is same , there is diffrent custom styling applied there . Will figure it out",
+                  },
+                ],
                 status: "uncompleted",
               },
             ],
@@ -230,16 +338,18 @@ export const users = [
                 ],
                 comments: [
                   {
-                    userName: "Priyanshu Bhardwaj",
+                    userName: "Anand Bhagat",
                     image:
                       "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
-                    comment: "This is a test comment",
+                    comment:
+                      "when the task is marked as defective, then where to show this count?",
                   },
                   {
-                    userName: "Priyanshu Bhardwaj",
+                    userName: "Puneet Pugalia",
                     image:
                       "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
-                    comment: "This is a another comment",
+                    comment:
+                      "Show the count in the performance report of the team members.",
                   },
                 ],
                 status: "uncompleted",
@@ -250,7 +360,21 @@ export const users = [
                 description: [
                   "we can track the slowdown by finding the difference between the two activities. If the difference is more than 3 hours then it will be calculated as a slowdown.",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Puneet Pugalia",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "we can track the slowdown by finding the difference between the two activities. If the difference is more than 3 hours then it will be calculated as a slowdown.",
+                  },
+                  {
+                    userName: "Puneet Pugalia",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "This is not very important so delegate it. ",
+                  },
+                ],
                 status: "uncompleted",
               },
               {
@@ -259,7 +383,21 @@ export const users = [
                 description: [
                   "show bar chart only in the weekly tab and remove bar chart from the monthly tab",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "check how its done on the dashboard",
+                  },
+                  {
+                    userName: "Priyanshu Bhardwaj",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "Not finding the way of changing the tooltip color",
+                  },
+                ],
                 status: "completed",
               },
               {
@@ -267,7 +405,14 @@ export const users = [
                 title:
                   "Remove the full screen loader and show it in right top corner of the screen, so that when the api is loading, still we can perform action of checking performance etc",
                 description: ["!add_budget 0.5"],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "looks good",
+                  },
+                ],
                 status: "completed",
               },
             ],
@@ -280,7 +425,20 @@ export const users = [
                 title:
                   "Setup project locally, send me Github username, will invite to the repository.dding new command to flag a task for counting the defects of the developer and the team lead",
                 description: ["invitation sent"],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "send a evidence",
+                  },
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "looks good",
+                  },
+                ],
                 status: "uncompleted",
               },
             ],
@@ -294,14 +452,46 @@ export const users = [
                 description: [
                   "add a new table on the current database for the user list. This is not same as the current user list.",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "looks good",
+                  },
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "looks good",
+                  },
+                ],
                 status: "uncompleted",
               },
               {
                 id: "317",
                 title: "API Integartion to login in",
                 description: ["What is the API for login integration?"],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "work on all the UI for now.",
+                  },
+                  {
+                    userName: "Priyanshu Bhardwaj",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "When I can start with the API integration?",
+                  },
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "I will let you know.",
+                  },
+                ],
                 status: "uncompleted",
               },
               {
@@ -310,7 +500,14 @@ export const users = [
                 description: [
                   "These are not the projects currently in the project list check this UI, currently, it's using local storage and a flat-file. We need to convert it to the cloud. This is the flat file.",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "looks good",
+                  },
+                ],
                 status: "uncompleted",
               },
             ],
@@ -331,7 +528,26 @@ export const users = [
                 title:
                   "In the survey form, add number for each question, make the radio of text clickable so when the text is clicked the radio should get toogle and make the radio button bigger",
                 description: ["yes, but add it only in last form"],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "task title is updated.",
+                  },
+                  {
+                    userName: "Priyanshu Bhardwaj",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "Have to increase the size of radio on click?",
+                  },
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "yes, but add it only in last form",
+                  },
+                ],
                 status: "uncompleted",
               },
               {
@@ -341,7 +557,27 @@ export const users = [
                 description: [
                   "Yellow highlighted logic is clear, Red text means those are required?",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Priyanshu Bhardwaj",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "Need more clarity",
+                  },
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "whats your understanding?",
+                  },
+                  {
+                    userName: "Priyanshu Bhardwaj",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "Yellow highlighted logic is clear, Red text means those are required?",
+                  },
+                ],
                 status: "completed",
               },
             ],
@@ -356,14 +592,29 @@ export const users = [
                 description: [
                   "if the image is not available show msg like the below",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "if the image is not available show msg like the below",
+                  },
+                ],
                 status: "uncompleted",
               },
               {
                 id: "324",
                 title: "Fixing the carry forward budget",
                 description: [""],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "looks good",
+                  },
+                ],
                 status: "completed",
               },
             ],
@@ -385,7 +636,29 @@ export const users = [
                 description: [
                   "Employer Dashboard: the links of my curriculums, my hired talents and search for a new talent should be in top navigation and not in the sidebar",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "Employer Dashboard: the links of my curriculums, my hired talents and search for a new talent should be in top navigation and not in the sidebar",
+                  },
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "if you have anyone idle start assiging these tasks to them. and once the task is assigned just tag me in the assigned task or comment on this task. ",
+                  },
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "Posting Internship or Job form breakdown is remaining, will be doing today.",
+                  },
+                ],
                 status: "uncompleted",
               },
               {
@@ -395,7 +668,29 @@ export const users = [
                 description: [
                   "I have added an extra budget, so check all the other pages for the spacing issue and fixed it. Mentioned all the pages list in which you will be fixing the spacing issue. Will increase the budget accordingly.",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "I have added an extra budget, so check all the other pages for the spacing issue and fixed it. Mentioned all the pages list in which you will be fixing the spacing issue. Will increase the budget accordingly.",
+                  },
+                  {
+                    userName: "Shashank Yadav",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "This evidence is for single-page courses only. If I will cover all pages in one piece of evidence then it will be difficult to manage.",
+                  },
+                  {
+                    userName: "Anand Bhagat",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "i just want to know if you have checked other pages, this evidence looks good for the course page.",
+                  },
+                ],
                 status: "completed",
               },
             ],
@@ -409,7 +704,20 @@ export const users = [
                 description: [
                   "Template to embed list of courses. (Use left sections). The right section will be used to place the filter widget.",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Mohd Anas",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "What's the situation here?",
+                  },
+                  {
+                    userName: "Balram Yadav",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "working on child component ",
+                  },
+                ],
                 status: "uncompleted",
               },
               {
@@ -418,7 +726,28 @@ export const users = [
                 description: [
                   "You can separate components in a separate file. But both will be shown on the same page",
                 ],
-                comments: [],
+                comments: [
+                  {
+                    userName: "Mohd Anas",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "These two tasks are connected Left Side: https://3.basecamp.com/4954106/buckets/28518706/todos/5165171668 Right Side: Course View Experience - ETA and timeline - Intern Portal (Internal)",
+                  },
+                  {
+                    userName: "Shashank Yadav",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment: "then Which template to choose for the left Side?",
+                  },
+                  {
+                    userName: "Mohd Anas",
+                    image:
+                      "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
+                    comment:
+                      "Course details will be on the left side. The course timeline will be on the right side.",
+                  },
+                ],
                 status: "completed",
               },
             ],
