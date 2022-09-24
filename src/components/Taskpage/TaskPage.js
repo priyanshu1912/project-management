@@ -17,6 +17,8 @@ function TaskPage() {
   const [task, setTask] = useState(null);
   const [taskListName, setTaskListName] = useState("");
 
+  console.log(task);
+
   // const task = state.task.task;
   // const task_list_name = state.task.item.task_list_name;
   // const project_name = state.project_name;
@@ -82,7 +84,7 @@ function TaskPage() {
             Comments ({task?.comments ? task?.comments?.length : 0})
           </div>
           <div>
-            <div className="flex gap-2 mb-6">
+            {/* <div className="flex gap-2 mb-6">
               <img
                 src="https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg"
                 className="w-10 h-10 rounded-full object-cover"
@@ -100,23 +102,23 @@ function TaskPage() {
                   cum?
                 </div>
               </div>
-            </div>
-            {comments.length !== 0 &&
-              comments.map((item) => {
+            </div> */}
+            {task?.comments?.length !== 0 &&
+              task?.comments?.map((item) => {
                 return (
                   <div className="flex gap-2 mb-6">
                     <img
-                      src="https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg"
+                      src={item.image}
                       className="w-10 h-10 rounded-full object-cover"
                     />
                     <div>
                       <div className="font-semibold">{item.userName}</div>
-                      <div className="font-normal">{item.time}</div>
-                      <div className="flex items-center my-1">
+                      {/* <div className="font-normal">{item.time}</div> */}
+                      {/* <div className="flex items-center my-1">
                         <AiFillStar color="#FFD700" size={18} />
                         <AiFillStar color="#FFD700" size={18} />
                         <AiFillStar color="#FFD700" size={18} />
-                      </div>
+                      </div> */}
                       <div>{item.comment}</div>
                     </div>
                   </div>
