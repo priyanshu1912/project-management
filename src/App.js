@@ -53,17 +53,17 @@ function App() {
                 setFlag={setFlag}
                 title="Admin"
                 child1="Admin"
-                child2="User"
+                child2="Client"
               />
             }
           />
           <Route
-            path="/auth/loginUser"
+            path="/auth/loginClient"
             element={
               <LoginForm
                 setFlag={setFlag}
-                title="User"
-                child1="User"
+                title="Client"
+                child1="Client"
                 child2="Admin"
               />
             }

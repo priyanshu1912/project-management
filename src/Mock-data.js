@@ -77,9 +77,9 @@ export const completedTasks = [
 export const users = [
   {
     id: "1",
-    name: "Anand Bhagat",
-    email: "anand@gmail.com",
-    password: "anand",
+    name: "Charmane Leaburn",
+    email: "charmane@gmail.com",
+    password: "charmane",
     projects: [
       {
         id: "11",
@@ -152,7 +152,7 @@ export const users = [
                     userName: "Anand Bhagat",
                     image:
                       "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
-                    comment: "looks good",
+                    comment: "Which part of the task took the longest?",
                   },
                 ],
                 status: "uncompleted",
@@ -171,7 +171,8 @@ export const users = [
                     userName: "Anand Bhagat",
                     image:
                       "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
-                    comment: "looks good",
+                    comment:
+                      "send video evidence, how it will look after collapse",
                   },
                 ],
                 status: "uncompleted",
@@ -211,9 +212,9 @@ export const users = [
   },
   {
     id: "2",
-    name: "Sakil Alam",
-    email: "sakil@gmail.com",
-    password: "sakil",
+    name: "Arlin Geer",
+    email: "arlin@gmail.com",
+    password: "arlin",
     projects: [
       {
         id: "21",
@@ -314,9 +315,9 @@ export const users = [
   },
   {
     id: "3",
-    name: "Priyanshu Bhardwaj",
-    email: "priyanshu@gmail.com",
-    password: "priyanshu",
+    name: "Ailee Whittle",
+    email: "ailee@gmail.com",
+    password: "ailee",
     projects: [
       {
         id: "31",
@@ -612,7 +613,7 @@ export const users = [
                     userName: "Anand Bhagat",
                     image:
                       "https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg",
-                    comment: "looks good",
+                    comment: "i am not able to identify the difference",
                   },
                 ],
                 status: "completed",

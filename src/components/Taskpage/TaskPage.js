@@ -3,7 +3,10 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { users } from "../../Mock-data.js";
-import { AiFillStar } from "react-icons/ai";
+import { EditorState } from "draft-js";
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import './TaskPage.css'
 
 function TaskPage() {
   const { state } = useLocation();
@@ -16,6 +19,9 @@ function TaskPage() {
   const [projectName, setProjectName] = useState("");
   const [task, setTask] = useState(null);
   const [taskListName, setTaskListName] = useState("");
+  const [editorState, setEditorState] = useState(() =>
+    EditorState.createEmpty()
+  );
 
   console.log(task);
 
@@ -125,7 +131,7 @@ function TaskPage() {
                 );
               })}
           </div>
-          <div className="flex items-center gap-2 mt-5">
+          {/* <div className="flex items-center gap-2 mt-5">
             <img
               src="https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg"
               className="w-10 h-10 rounded-full object-cover"
@@ -141,7 +147,14 @@ function TaskPage() {
               />
               <button type="submit" className="hidden"></button>
             </form>
-          </div>
+          </div> */}
+          <Editor
+            editorState={editorState}
+            onEditorStateChange={setEditorState}
+            wrapperClassName="wrapper-class"
+            editorClassName="editor-class"
+            toolbarClassName="toolbar-class"
+          />
         </div>
       </div>
     </div>
