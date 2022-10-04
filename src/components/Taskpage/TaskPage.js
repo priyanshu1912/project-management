@@ -3,10 +3,8 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { users } from "../../Mock-data.js";
-import { EditorState } from "draft-js";
-import { Editor } from "react-draft-wysiwyg";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import './TaskPage.css'
+import "./TaskPage.css";
+import TextEditor from "./TextEditor.js";
 
 function TaskPage() {
   const { state } = useLocation();
@@ -19,16 +17,9 @@ function TaskPage() {
   const [projectName, setProjectName] = useState("");
   const [task, setTask] = useState(null);
   const [taskListName, setTaskListName] = useState("");
-  const [editorState, setEditorState] = useState(() =>
-    EditorState.createEmpty()
-  );
+  const [newTasks, setNewTasks] = useState([]);
 
-  console.log(task);
-
-  // const task = state.task.task;
-  // const task_list_name = state.task.item.task_list_name;
-  // const project_name = state.project_name;
-  // const userName = state.userName;
+  console.log(newTasks);
 
   useEffect(() => {
     let user = users.filter((item) => item.id === id)[0];
@@ -90,25 +81,6 @@ function TaskPage() {
             Comments ({task?.comments ? task?.comments?.length : 0})
           </div>
           <div>
-            {/* <div className="flex gap-2 mb-6">
-              <img
-                src="https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg"
-                className="w-10 h-10 rounded-full object-cover"
-              />
-              <div>
-                <div className="font-semibold">Priyanshu Bhardwaj </div>
-                <div className="font-normal">42 seconds ago</div>
-                <div className="flex items-center my-1">
-                  <AiFillStar color="#FFD700" size={18} />
-                  <AiFillStar color="#FFD700" size={18} />
-                  <AiFillStar color="#FFD700" size={18} />
-                </div>
-                <div>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
-                  cum?
-                </div>
-              </div>
-            </div> */}
             {task?.comments?.length !== 0 &&
               task?.comments?.map((item) => {
                 return (
@@ -119,42 +91,31 @@ function TaskPage() {
                     />
                     <div>
                       <div className="font-semibold">{item.userName}</div>
-                      {/* <div className="font-normal">{item.time}</div> */}
-                      {/* <div className="flex items-center my-1">
-                        <AiFillStar color="#FFD700" size={18} />
-                        <AiFillStar color="#FFD700" size={18} />
-                        <AiFillStar color="#FFD700" size={18} />
-                      </div> */}
                       <div>{item.comment}</div>
                     </div>
                   </div>
                 );
               })}
           </div>
-          {/* <div className="flex items-center gap-2 mt-5">
-            <img
-              src="https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg"
-              className="w-10 h-10 rounded-full object-cover"
-            />
-            <form onSubmit={addComment} className="w-full">
-              <input
-                type="text"
-                placeholder="Add a comment..."
-                name="newcomment"
-                value={newcomment}
-                onChange={(e) => setNewcomment(e.target.value)}
-                className="w-full border-2 p-2 outline-none"
-              />
-              <button type="submit" className="hidden"></button>
-            </form>
-          </div> */}
-          <Editor
-            editorState={editorState}
-            onEditorStateChange={setEditorState}
-            wrapperClassName="wrapper-class"
-            editorClassName="editor-class"
-            toolbarClassName="toolbar-class"
-          />
+          {newTasks?.map((item) => {
+            return (
+              <div className="flex gap-2 mb-6">
+                <img
+                  src="https://pbs.twimg.com/profile_images/981311875643195393/dS0t6BQ8_400x400.jpg"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+                <div>
+                  <div className="font-semibold">{userName}</div>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: item,
+                    }}
+                  />
+                </div>
+              </div>
+            );
+          })}
+          <TextEditor newTasks={newTasks} setNewTasks={setNewTasks} />
         </div>
       </div>
     </div>
