@@ -167,8 +167,11 @@ function Dashboard() {
                                 />
                               </div>
                             </div>
-
-                            <div className="mt-1.5">{item.description}</div>
+                            <div
+                    dangerouslySetInnerHTML={{
+                      __html: item.description,
+                    }}
+                  />
                           </div>
                         );
                       }

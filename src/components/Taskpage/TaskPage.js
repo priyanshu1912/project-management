@@ -18,6 +18,7 @@ function TaskPage() {
   const [task, setTask] = useState(null);
   const [taskListName, setTaskListName] = useState("");
   const [newTasks, setNewTasks] = useState([]);
+  const [newComment, setNewComment] = useState("");
 
   console.log(newTasks);
 
@@ -108,14 +109,22 @@ function TaskPage() {
                   <div className="font-semibold">{userName}</div>
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: item,
+                      __html: item.newComment,
                     }}
                   />
                 </div>
               </div>
             );
           })}
-          <TextEditor newTasks={newTasks} setNewTasks={setNewTasks} />
+          <TextEditor newComment={newComment} setNewComment={setNewComment} />
+          <div
+            onClick={() => {
+              setNewTasks([...newTasks, newComment]);
+            }}
+            className="bg-blue-500 text-white w-fit p-1 rounded-md mt-2 cursor-pointer"
+          >
+            Add comment
+          </div>
         </div>
       </div>
     </div>

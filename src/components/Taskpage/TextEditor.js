@@ -154,11 +154,24 @@ export default class TextEditor extends Component {
     this.setState({
       editorState,
     });
+    {
+      this.props.setData &&
+        this.props.setData({
+          data: draftToHtml(convertToRaw(editorState.getCurrentContent())),
+        });
+    }
+    {
+      this.props.setNewComment &&
+        this.props.setNewComment({
+          newComment: draftToHtml(
+            convertToRaw(editorState.getCurrentContent())
+          ),
+        });
+    }
   };
 
   render() {
     const { editorState } = this.state;
-    const { newTasks, setNewTasks } = this.props;
     return (
       <div>
         <Editor
@@ -185,7 +198,7 @@ export default class TextEditor extends Component {
             ],
           }}
         />
-        <div
+        {/* <div
           onClick={() => {
             setNewTasks([
               ...newTasks,
@@ -196,11 +209,7 @@ export default class TextEditor extends Component {
           className="bg-blue-500 text-white w-fit p-1 rounded-md mt-2 cursor-pointer"
         >
           Add comment
-        </div>
-        {/* <textarea
-          disabled
-          value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
-        ></textarea> */}
+        </div> */}
       </div>
     );
   }

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import TextEditor from "./Taskpage/TextEditor";
 
 function TicketModal({
   ticketData,
@@ -8,6 +9,12 @@ function TicketModal({
   saveTicket,
   currentActivity,
 }) {
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    setTicketData({ ...ticketData, description: data.data });
+  }, [data]);
+
   return (
     <div
       class="relative z-10"
@@ -24,14 +31,14 @@ function TicketModal({
                 type="text"
                 name="title"
                 placeholder="Title"
-                className="border-2 border-gray-400 outline-none p-1 w-full"
+                className="border border-grey outline-none p-1 w-full"
                 onChange={(e) =>
                   setTicketData({ ...ticketData, title: e.target.value })
                 }
               />
               <br />
               <br />
-              <textarea
+              {/* <textarea
                 type="text"
                 name="description"
                 placeholder="Description"
@@ -39,10 +46,8 @@ function TicketModal({
                 onChange={(e) =>
                   setTicketData({ ...ticketData, description: e.target.value })
                 }
-              />
-              <br />
-              <br />
-              <input type="file" className="outline-none p-1 w-full" />
+              /> */}
+              <TextEditor data={data} setData={setData} />
             </div>
             <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
               <button
